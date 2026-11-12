@@ -39,8 +39,10 @@
         <item>0</item>
     </integer-array>
     <string-array name="config_perDeviceStateRotationLockDefaults" translatable="false">
+        <!-- posture:value[:fallback] - 0 folded, 1 half-folded, 2 unfolded -->
         <item>0:1</item>
-        <item>3:2</item>
+        <item>1:0:2</item>
+        <item>2:2</item>
     </string-array>
 
     <item name="config_screenBrightnessSettingMinimumFloat" type="dimen">0.0</item>
