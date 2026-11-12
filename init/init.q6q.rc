@@ -48,6 +48,12 @@ on post-fs-data
     exec - system system -- /system/bin/mafpc_write
     
 on boot
+# Fold hall: load this unit's factory switch thresholds into the AKM digital
+# hall. Without them the chip keeps DT defaults (Y 20000/2000), its switch
+# output (gpio98, "flip") never toggles and the ADSP never learns the fold
+# state (breaks proximity).
+    copy /efs/FactoryApp/digital_hall /sys/class/sec/digital_hall/digital_hall_thd
+
 # SDHMS Slowdown : Cpuset
     mkdir /dev/cpuset/abnormal
     write /dev/cpuset/abnormal/cpus 0-2

@@ -1,0 +1,3 @@
+# init.q6q.rc: copy the digital hall calibration from /efs to sysfs
+allow init app_efs_file:dir search;
+allow init app_efs_file:file r_file_perms;
