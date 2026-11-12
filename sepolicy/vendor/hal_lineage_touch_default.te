@@ -1,0 +1,2 @@
+# The touch HAL reads cmd_list / cmd_result to detect supported features on tsp1 and tsp2.
+allow hal_lineage_touch_default vendor_sysfs_touchscreen:file r_file_perms;

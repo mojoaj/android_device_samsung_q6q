@@ -1,0 +1,13 @@
+<manifest version="1.0" type="device">
+    <!-- q6q: only advertise touch features the Fold6 touch ICs are confirmed to support.
+         The common manifest also declares IHighTouchPollingRate / ITouchscreenGesture; if those
+         are declared but not registered, system_server blocks and the watchdog kills it. -->
+    <hal format="aidl" override="true">
+        <name>vendor.lineage.touch</name>
+        <version>1</version>
+        <interface>
+            <name>IGloveMode</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>

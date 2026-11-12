@@ -74,6 +74,12 @@ TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_LEFT
 # Measured on device: the inner digitiser already reports in the upright (rotated) frame.
 TARGET_RECOVERY_DEFAULT_TOUCH_ROTATION := ROTATION_NONE
 
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# VINTF
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest_q6q.xml
+
 # Vendor props
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 

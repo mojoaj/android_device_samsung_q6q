@@ -1,0 +1,2 @@
+# Foldable touch HAL (ported from q5q); the common policy only labels the non-foldable names.
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch-service\.samsung-foldable    u:object_r:hal_lineage_touch_default_exec:s0
