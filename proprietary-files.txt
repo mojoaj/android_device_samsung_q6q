@@ -242,6 +242,7 @@ vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD_DSI1.dat
 # Fold: device state and display layout
 vendor/etc/devicestate/device_state_configuration.xml
 vendor/etc/displayconfig/display_layout_configuration.xml
+vendor/etc/input-port-associations.xml
 
 # Sensor configs (q6q)
 vendor/etc/sensors/config/lanai_ak991x_8.json
