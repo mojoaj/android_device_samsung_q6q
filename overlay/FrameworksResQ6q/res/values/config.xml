@@ -38,6 +38,12 @@
     <integer-array name="config_deviceStatesOnWhichToSleep" translatable="false">
         <item>0</item>
     </integer-array>
+    <!-- The rotation sensor's frame matches the cover screen; seen from the inner
+         screen (half-open/open) left and right are swapped. -->
+    <integer-array name="config_deviceStatesToReverseDefaultDisplayRotationAroundZAxis" translatable="false">
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
     <string-array name="config_perDeviceStateRotationLockDefaults" translatable="false">
         <!-- posture:value[:fallback] - 0 folded, 1 half-folded, 2 unfolded -->
         <item>0:1</item>
