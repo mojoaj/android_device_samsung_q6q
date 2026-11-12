@@ -1,7 +1,13 @@
 # Samsung sensor factory daemon: feeds panel state/brightness and
 # calibration to the under-display light/proximity sensors on the ADSP.
-# (Its /dev/adsprpc-smd probes stay denied: QC neverallow.)
 allow factory_ssc { vendor_sysfs_display vendor_sysfs_graphics }:dir r_dir_perms;
 allow factory_ssc { vendor_sysfs_display vendor_sysfs_graphics }:file rw_file_perms;
 allow factory_ssc { vendor_sysfs_display vendor_sysfs_graphics }:lnk_file read;
 hwbinder_use(factory_ssc)
+
+# FastRPC to the ADSP (sns_device_mode_set: tells the sensor hub the fold
+# state, without it the light sensor stays on the cover optic after a fold).
+# Read-only, as on stock; QC's neverallow forbids anything beyond r_file_perms.
+allow factory_ssc { vendor_qdsp_device vendor_xdsp_device }:chr_file r_file_perms;
+allow factory_ssc dmabuf_system_heap_device:chr_file r_file_perms;
+get_prop(factory_ssc, vendor_adsprpc_prop)
