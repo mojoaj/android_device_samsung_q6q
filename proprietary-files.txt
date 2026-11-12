@@ -153,6 +153,9 @@ vendor/firmware/mfc/mfc_fw_flash_nu1668.bin
 vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc/libnfc-nxp_RF.conf
 
+# Network names (GSMA SE.13 PLMN list read by libsec-ril)
+vendor/etc/plmn_se13_prebuilt.bin
+
 # Performance
 vendor/etc/powerhint.xml
 

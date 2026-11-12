@@ -31,6 +31,21 @@
     </integer-array>
     <integer-array name="config_rearDisplayDeviceStates" translatable="false">
     </integer-array>
+
+    <!-- Jetpack WindowManager hinge (FoldingFeature) for apps like YouTube flex mode.
+         Inner screen is 1856x2160 at rotation 0 with the hinge running top to bottom. -->
+    <string name="config_display_features" translatable="false">fold-[928,0,928,2160]</string>
+    <!-- DeviceState:Jetpack posture (1 closed, 2 half-opened, 3 opened) -->
+    <string-array name="config_device_state_postures" translatable="false">
+        <item>0:1</item>
+        <item>2:2</item>
+        <item>3:3</item>
+    </string-array>
+    <!-- Half-folded with the hinge horizontal (rotated 90/270) is tabletop -->
+    <integer-array name="config_deviceTabletopRotations" translatable="false">
+        <item>90</item>
+        <item>270</item>
+    </integer-array>
     <integer-array name="config_deviceStatesOnWhichToWakeUp" translatable="false">
         <item>2</item>
         <item>3</item>
