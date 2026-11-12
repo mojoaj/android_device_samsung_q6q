@@ -8,6 +8,11 @@
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# BRING-UP ONLY (remove before any release): pre-authorise the build PC's adb key and
+# enable adb by default, so logs can be read even if the first boot never reaches the UI.
+PRODUCT_ADB_KEYS := $(LOCAL_PATH)/adb_keys
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
+
 # Boot animation (cover screen size; multi-display below)
 TARGET_SCREEN_HEIGHT := 2376
 TARGET_SCREEN_WIDTH := 968
