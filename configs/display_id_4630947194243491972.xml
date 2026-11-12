@@ -8,6 +8,55 @@
      display (folded). Values not set here fall back to config.xml.
 -->
 <displayConfiguration>
+    <!-- GUESS: brightness-to-nits map borrowed from q5q (Fold5). Auto-brightness
+         stays off without one ("Screen brightness nits configuration is unavailable"). -->
+    <screenBrightnessMap>
+        <point>
+            <value>0.0</value>
+            <nits>1</nits>
+        </point>
+        <point>
+            <value>0.015686</value>
+            <nits>10.39</nits>
+        </point>
+        <point>
+            <value>0.041830</value>
+            <nits>34.6</nits>
+        </point>
+        <point>
+            <value>0.083660</value>
+            <nits>83.72</nits>
+        </point>
+        <point>
+            <value>0.167320</value>
+            <nits>204.69</nits>
+        </point>
+        <point>
+            <value>0.250980</value>
+            <nits>346.06</nits>
+        </point>
+        <point>
+            <value>0.333333</value>
+            <nits>500</nits>
+        </point>
+        <point>
+            <value>0.522876</value>
+            <nits>784</nits>
+        </point>
+        <point>
+            <value>0.666667</value>
+            <nits>1000</nits>
+        </point>
+        <point>
+            <value>0.800000</value>
+            <nits>1200</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>1500</nits>
+        </point>
+    </screenBrightnessMap>
+    <autoBrightness enabled="true" />
     <refreshRate>
         <defaultRefreshRate>0</defaultRefreshRate>
         <defaultPeakRefreshRate>120</defaultPeakRefreshRate>
