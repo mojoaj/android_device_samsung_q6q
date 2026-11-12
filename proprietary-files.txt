@@ -230,9 +230,6 @@ vendor/lib64/libTsAf_Q6B6Q.so
 vendor/lib64/libTsAwbFront_Q6.so
 vendor/lib64/libTsAwb_Q6.so
 vendor/lib64/libarcsoft_udc_enhancement.so
-vendor/lib64/libtriplecam_image_optical_zoom.so
-vendor/lib64/libtriplecam_optical_zoom_control.so
-vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libudc_core.camera.samsung.so
 
 # Display calibration (q6q panels)
