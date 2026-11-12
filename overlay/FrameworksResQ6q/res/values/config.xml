@@ -111,6 +111,12 @@
     <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
 
+    <!-- After a fold/unfold the sensor hub needs ~0.5-1 s to bring the other optic up;
+         until then it reports stale, too-dark values. Ignore readings for 1 s after the
+         light sensor is enabled, keeping the brightness carried over from the other
+         screen (needs the frameworks/base warm-up time-base fix). -->
+    <integer name="config_lightSensorWarmupTime">1000</integer>
+
     <bool name="config_allowRotationResolver">false</bool>
 
     <bool name="config_unfoldTransitionEnabled">true</bool>
