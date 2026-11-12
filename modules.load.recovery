@@ -215,8 +215,6 @@ sg.ko
 spi-msm-geni.ko
 spmi-pmic-arb-debug.ko
 smsc.ko
-smsc75xx.ko
-smsc95xx.ko
 msm_sharedmem.ko
 phy-generic.ko
 phy-qcom-emu.ko
