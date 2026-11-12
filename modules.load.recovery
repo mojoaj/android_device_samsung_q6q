@@ -323,7 +323,6 @@ usb_vendor_receiver.ko
 max77775-limiter.ko
 fingerprint.ko
 fingerprint_sysfs.ko
-delayed_sack.ko
 max77775_charger.ko
 pdic_notifier_module.ko
 abc_hub.ko

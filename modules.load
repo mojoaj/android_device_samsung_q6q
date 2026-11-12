@@ -192,7 +192,6 @@ usb_vendor_receiver.ko
 max77775-limiter.ko
 fingerprint.ko
 fingerprint_sysfs.ko
-delayed_sack.ko
 max77775_charger.ko
 pdic_notifier_module.ko
 abc_hub.ko
@@ -355,7 +354,6 @@ qseecom_dlkm.ko
 ubwcp.ko
 btpower.ko
 bt_fm_slim.ko
-radio-i2c-rtc6226-qca.ko
 qca_cld3_kiwi_v2.ko
 cnss2.ko
 cnss_plat_ipc_qmi_svc.ko
@@ -433,7 +431,6 @@ wcd939x_slave_dlkm.ko
 tas25xx_dlkm.ko
 btpower.ko
 bt_fm_slim.ko
-radio-i2c-rtc6226-qca.ko
 camera.ko
 gsim.ko
 ipam.ko
