@@ -223,10 +223,10 @@ vendor/lib64/camera/components/com.ss.stats.impl_aec.so
 vendor/lib64/camera/components/com.ss.stats.impl_af.so
 vendor/lib64/camera/components/com.ss.stats.impl_awb.so
 vendor/lib64/camera/components/com.ss.stats.sec3awrapper.so
-vendor/lib64/camera/components/libTsAeFront_q6.so
-vendor/lib64/camera/components/libTsAe_q6.so
+vendor/lib64/camera/components/libTsAeFront_q6.so;FIX_SONAME
+vendor/lib64/camera/components/libTsAe_q6.so;FIX_SONAME
 vendor/lib64/libAIHRWrapper.camera.samsung.so
-vendor/lib64/libTsAf_Q6B6Q.so
+vendor/lib64/libTsAf_Q6B6Q.so;FIX_SONAME
 vendor/lib64/libTsAwbFront_Q6.so
 vendor/lib64/libTsAwb_Q6.so
 vendor/lib64/libarcsoft_udc_enhancement.so
