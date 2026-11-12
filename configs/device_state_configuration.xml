@@ -3,8 +3,9 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 
-     Galaxy Z Fold6: the fold hall switch (gpio98, "flip") never toggles
-     under our kernel, so drive the fold state from the hinge angle sensor.
+     Galaxy Z Fold6: CLOSE comes from the fold hall switch ("flip", SW_LID,
+     needs the digital hall calibration loaded by init.q6q.rc). With the
+     phone open, the hinge angle sensor picks HALF_OPENED or OPEN.
 -->
 <device-state-config>
     <device-state>
@@ -16,14 +17,9 @@
             <property>com.android.server.policy.PROPERTY_POWER_CONFIGURATION_TRIGGER_SLEEP</property>
         </properties>
         <conditions>
-            <sensor>
-                <type>android.sensor.hinge_angle</type>
-                <name>hinge_angle  Wakeup</name>
-                <value>
-                    <min-inclusive>0</min-inclusive>
-                    <max>15</max>
-                </value>
-            </sensor>
+            <lid-switch>
+                <open>FALSE</open>
+            </lid-switch>
         </conditions>
     </device-state>
     <device-state>
@@ -35,11 +31,13 @@
             <property>com.android.server.policy.PROPERTY_POWER_CONFIGURATION_TRIGGER_WAKE</property>
         </properties>
         <conditions>
+            <lid-switch>
+                <open>TRUE</open>
+            </lid-switch>
             <sensor>
                 <type>android.sensor.hinge_angle</type>
                 <name>hinge_angle  Wakeup</name>
                 <value>
-                    <min-inclusive>15</min-inclusive>
                     <max>150</max>
                 </value>
             </sensor>
@@ -54,6 +52,9 @@
             <property>com.android.server.policy.PROPERTY_POWER_CONFIGURATION_TRIGGER_WAKE</property>
         </properties>
         <conditions>
+            <lid-switch>
+                <open>TRUE</open>
+            </lid-switch>
             <sensor>
                 <type>android.sensor.hinge_angle</type>
                 <name>hinge_angle  Wakeup</name>
