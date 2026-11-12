@@ -3,7 +3,7 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 
-     Inner panel (S6E3XA5, port 131). Disables the proximity sensor
+     Inner panel (S6E3XA5, port 131). Uses touchscreen proximity
      (see below) and sets 120 Hz. Values not set here fall back to
      config.xml.
 -->
@@ -12,12 +12,15 @@
         <defaultRefreshRate>0</defaultRefreshRate>
         <defaultPeakRefreshRate>120</defaultPeakRefreshRate>
     </refreshRate>
-    <!-- No proximity sensor for the inner panel. Both proximity sensors
-         (virtual_prox and tmd4914_sub) face the cover side, i.e. the back of
-         the phone when unfolded (tested b17: covering the inner top edge
-         gave no events, covering the back did). Empty values = no sensor. -->
+    <!-- Both real proximity sensors (virtual_prox, tmd4914_sub) face the cover
+         side, i.e. the back when unfolded (b17 test), so they would blank the
+         inner screen from the back. With no sensor at all (b18) the dialer
+         sees "no proximity wake lock" when a call starts unfolded and then
+         never uses proximity, even after folding.
+         GUESS: Samsung's touchscreen proximity keeps proximity "available"
+         without reacting to the back. -->
     <proxSensor>
-        <type></type>
-        <name></name>
+        <type>com.samsung.sensor.touch_proximity</type>
+        <name>Touch Proximity Sensor</name>
     </proxSensor>
 </displayConfiguration>
