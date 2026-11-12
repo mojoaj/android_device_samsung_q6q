@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Inner screen (sw ~707dp): side key centre measured at y=1020 px -->
+    <dimen name="physical_power_button_center_screen_location_y">1020.0px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1020.0px</dimen>
+</resources>

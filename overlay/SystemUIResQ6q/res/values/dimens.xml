@@ -13,10 +13,11 @@
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
 
     <!-- Location on the screen of the center of the physical power button. -->
-    <!-- GUESS: Fold6 side key, to tune on device --><dimen name="physical_power_button_center_screen_location_y">1080.0px</dimen>
+    <!-- Cover screen: side key centre measured at y=1095 px (inner screen: values-sw600dp) -->
+    <dimen name="physical_power_button_center_screen_location_y">1095.0px</dimen>
 
     <!-- Location on the screen of the center of the fingerprint sensor. -->
-    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1080.0px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1095.0px</dimen>
 
     <!-- Pixel pitch of the device. um/px -->
     <item name="pixel_pitch" format="float" type="dimen">50.69</item>
