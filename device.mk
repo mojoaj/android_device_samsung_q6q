@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display_layout_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_layout_configuration.xml \
     $(LOCAL_PATH)/configs/display_id_4630947194243491972.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947194243491972.xml
 
+# Fold hall calibration
+PRODUCT_PACKAGES += \
+    init.q6q.dhall.sh
+
 # Power
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json

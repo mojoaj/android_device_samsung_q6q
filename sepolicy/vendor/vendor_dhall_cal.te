@@ -1,0 +1,15 @@
+# init.q6q.dhall.sh: copy the digital hall calibration from /efs to sysfs
+type vendor_dhall_cal, domain;
+type vendor_dhall_cal_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_dhall_cal)
+
+allow vendor_dhall_cal vendor_shell_exec:file rx_file_perms;
+allow vendor_dhall_cal vendor_toolbox_exec:file rx_file_perms;
+
+allow vendor_dhall_cal efs_file:dir search;
+allow vendor_dhall_cal app_efs_file:dir search;
+allow vendor_dhall_cal app_efs_file:file r_file_perms;
+
+allow vendor_dhall_cal sysfs_sec_digital_hall:dir search;
+allow vendor_dhall_cal sysfs_sec_digital_hall:file rw_file_perms;

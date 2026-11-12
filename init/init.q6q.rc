@@ -48,11 +48,8 @@ on post-fs-data
     exec - system system -- /system/bin/mafpc_write
     
 on boot
-# Fold hall: load this unit's factory switch thresholds into the AKM digital
-# hall. Without them the chip keeps DT defaults (Y 20000/2000), its switch
-# output (gpio98, "flip") never toggles and the ADSP never learns the fold
-# state (breaks proximity).
-    copy /efs/FactoryApp/digital_hall /sys/class/sec/digital_hall/digital_hall_thd
+# Fold hall: load the digital hall factory calibration (see init.q6q.dhall.sh)
+    start vendor.dhall_cal
 
 # SDHMS Slowdown : Cpuset
     mkdir /dev/cpuset/abnormal
@@ -146,6 +143,13 @@ on property:sys.boot_completed=1
 # Pageboostd
 on property:sys.boot_completed=1
     start pageboostd
+
+service vendor.dhall_cal /vendor/bin/init.q6q.dhall.sh
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled
 
 service pageboostd /system/bin/pageboostd
     class main

@@ -9,3 +9,9 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.q6q.dhall.sh",
+    src: "init.q6q.dhall.sh",
+    vendor: true,
+}
