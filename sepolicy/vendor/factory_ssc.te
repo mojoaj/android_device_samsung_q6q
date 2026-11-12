@@ -1,0 +1,7 @@
+# Samsung sensor factory daemon: feeds panel state/brightness and
+# calibration to the under-display light/proximity sensors on the ADSP.
+allow factory_ssc { vendor_qdsp_device vendor_xdsp_device }:chr_file rw_file_perms;
+allow factory_ssc { vendor_sysfs_display vendor_sysfs_graphics }:dir r_dir_perms;
+allow factory_ssc { vendor_sysfs_display vendor_sysfs_graphics }:file rw_file_perms;
+allow factory_ssc { vendor_sysfs_display vendor_sysfs_graphics }:lnk_file read;
+hwbinder_use(factory_ssc)
