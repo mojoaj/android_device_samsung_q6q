@@ -353,7 +353,6 @@ sx9385.ko
 nu1668-charger.ko
 max17333.ko
 pdic_max77775.ko
-fst3ca60y_i2c.ko
 wez01.ko
 akm.ko
 mfd_s2mpb02.ko
