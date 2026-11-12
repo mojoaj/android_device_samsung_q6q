@@ -1,0 +1,268 @@
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from Samsung Galaxy Z Fold6 (F956BXXS2CYL5)
+
+
+# ACDB
+vendor/etc/audconf/OPEN/acdb_cal.acdb:vendor/etc/acdbdata/pineapple/acdb_cal.acdb
+vendor/etc/audconf/OPEN/workspaceFileXml.qwsp:vendor/etc/acdbdata/pineapple/workspaceFileXml.qwsp
+
+# Audio configs
+vendor/etc/audio/sku_pineapple/mixer_paths.xml
+vendor/etc/audio/sku_pineapple/resourcemanager.xml
+
+# Audio firmware
+vendor/firmware/cs40l26-a2h.bin
+vendor/firmware/cs40l26-calib.bin
+vendor/firmware/cs40l26-calib.wmfw
+vendor/firmware/cs40l26-dvl.bin
+vendor/firmware/cs40l26-svc.bin
+vendor/firmware/cs40l26-svc1.bin
+vendor/firmware/cs40l26-svc2.bin
+vendor/firmware/cs40l26-svc3.bin
+vendor/firmware/cs40l26-wt1.bin
+vendor/firmware/cs40l26-wt2.bin
+vendor/firmware/cs40l26-wt3.bin
+vendor/firmware/cs40l26.bin
+vendor/firmware/cs40l26.wmfw
+
+# Audio params
+vendor/etc/LVACFS_Calibration.dat
+vendor/etc/LVACFS_Configuration.txt
+vendor/etc/LVACFS_ControlParams.txt
+vendor/etc/SoundBoosterParam.txt
+vendor/firmware/SoundBoosterParam.bin
+vendor/firmware/dax_param.bin
+
+# Camera firmware
+vendor/firmware/CAMERA_ICP.b00
+vendor/firmware/CAMERA_ICP.b01
+vendor/firmware/CAMERA_ICP.b02
+vendor/firmware/CAMERA_ICP.b03
+vendor/firmware/CAMERA_ICP.b04
+vendor/firmware/CAMERA_ICP.b05
+vendor/firmware/CAMERA_ICP.b06
+vendor/firmware/CAMERA_ICP.b07
+vendor/firmware/CAMERA_ICP.b08
+vendor/firmware/CAMERA_ICP.b09
+vendor/firmware/CAMERA_ICP.b10
+vendor/firmware/CAMERA_ICP.b11
+vendor/firmware/CAMERA_ICP.b12
+vendor/firmware/CAMERA_ICP.b13
+vendor/firmware/CAMERA_ICP.b14
+vendor/firmware/CAMERA_ICP.b15
+vendor/firmware/CAMERA_ICP.b16
+vendor/firmware/CAMERA_ICP.b17
+vendor/firmware/CAMERA_ICP.b18
+vendor/firmware/CAMERA_ICP.b19
+vendor/firmware/CAMERA_ICP.b20
+vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/CAMERA_ICP.mbn
+vendor/firmware/CAMERA_ICP.mdt
+vendor/firmware/CAMERA_ICP_170.elf
+vendor/firmware/ois_mcu_stm32g_fw.bin
+vendor/lib64/bm4a68v08s12n52.bin
+vendor/lib64/bm4a68v08s12n53.bin
+vendor/lib64/bm4a73v08s12n02.bin
+vendor/lib64/bm4a73v08s12n03.bin
+vendor/lib64/bm4a73v08s12n04.bin
+vendor/lib64/bm4a73v08s12n06.bin
+vendor/lib64/bm4a73v08s12n07.bin
+vendor/lib64/bm4a73v08s12n12.bin
+vendor/lib64/bm4a73v08s12n13.bin
+vendor/lib64/bm4a73v08s12n14.bin
+vendor/lib64/bm4a73v08s12n15.bin
+vendor/lib64/bm4a73v08s12n16.bin
+vendor/lib64/bm4a73v08s12n17.bin
+vendor/lib64/bm4a73v08s12n18.bin
+vendor/lib64/bm4a73v08s12n19.bin
+vendor/lib64/bm4a73v08s12n20.bin
+vendor/lib64/bm4a73v08s12n21.bin
+vendor/lib64/bm4a73v08s12n22.bin
+vendor/lib64/bm4a73v08s12n23.bin
+vendor/lib64/bm4a73v08s12n24.bin
+vendor/lib64/bm4a73v08s12n25.bin
+vendor/lib64/bm4a73v08s12n26.bin
+vendor/lib64/bm4a73v08s12n27.bin
+vendor/lib64/bm4a73v08s12n28.bin
+vendor/lib64/bm4a73v08s12n29.bin
+vendor/lib64/bm4a73v08s12n30.bin
+vendor/lib64/bm4a73v08s12n35.bin
+vendor/lib64/bm4a73v08s12n36.bin
+vendor/lib64/bm4a73v08s12n37.bin
+vendor/lib64/bm4a73v08s12n38.bin
+vendor/lib64/bm4a73v08s12n39.bin
+vendor/lib64/bm4a73v08s12n40.bin
+vendor/lib64/bm4a73v08s12n43.bin
+vendor/lib64/bm4a73v08s12n44.bin
+vendor/lib64/bm4a73v08s12n45.bin
+vendor/lib64/bm4a73v08s12n46.bin
+vendor/lib64/bm4a73v08s12n47.bin
+vendor/lib64/bm4a73v08s12n48.bin
+vendor/lib64/bm4a73v08s12n49.bin
+vendor/lib64/bm4a73v08s12n50.bin
+vendor/lib64/bm4a73v08s12n51.bin
+vendor/lib64/bm4a73v08s12n54.bin
+vendor/lib64/bm4a73v08s12n55.bin
+vendor/lib64/bm4a73v08s12n56.bin
+vendor/lib64/bm4a73v08s12n57.bin
+vendor/lib64/bm4a73v08s12n58.bin
+vendor/lib64/bm4a73v08s12n59.bin
+vendor/lib64/bm4a73v08s12n60.bin
+vendor/lib64/bm4a73v08s12n61.bin
+vendor/lib64/bm4a73v08s12n62.bin
+
+# Display calibration
+vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD.dat
+
+# EVA firmware
+vendor/firmware/evass.b00
+vendor/firmware/evass.b01
+vendor/firmware/evass.b02
+vendor/firmware/evass.b03
+vendor/firmware/evass.b04
+vendor/firmware/evass.b05
+vendor/firmware/evass.b06
+vendor/firmware/evass.b07
+vendor/firmware/evass.b08
+vendor/firmware/evass.b09
+vendor/firmware/evass.b10
+vendor/firmware/evass.b11
+vendor/firmware/evass.b12
+vendor/firmware/evass.b13
+vendor/firmware/evass.b14
+vendor/firmware/evass.b15
+vendor/firmware/evass.b16
+vendor/firmware/evass.b17
+vendor/firmware/evass.b18
+vendor/firmware/evass.b19
+vendor/firmware/evass.mbn
+vendor/firmware/evass.mdt
+
+# Graphics (Adreno firmware)
+vendor/firmware/gen70900_aqe.fw
+vendor/firmware/gen70900_sqe.fw
+vendor/firmware/gen70900_zap.mbn
+vendor/firmware/gmu_gen70900.bin
+
+# Miscellaneous firmware
+vendor/firmware/max77775-extra-fw.bin
+vendor/firmware/max77775-fw.bin
+vendor/firmware/mfc/mfc_fw_flash_nu1668.bin
+
+# NFC configs
+vendor/etc/libnfc-nxp.conf
+vendor/etc/nfc/libnfc-nxp_RF.conf
+
+# Performance
+vendor/etc/powerhint.xml
+
+# Secure Element
+vendor/etc/libese-nxp.conf
+vendor/etc/secnvm/k250a_47000400_0.img
+vendor/etc/secnvm/k250a_47000403_1.img
+vendor/etc/secnvm/k250a_47000407_c.img
+
+# Sensor configs
+vendor/etc/sensors/config/akmlib.json
+vendor/etc/sensors/config/json.lst
+vendor/etc/sensors/config/lanai_ak991x_0.json
+vendor/etc/sensors/config/lanai_lps22df_0.json
+
+# Sensor firmware
+vendor/firmware/00_generic_xtalk_shape.bin
+vendor/firmware/vl53l8.bin
+
+
+# Ultra-wideband
+vendor/firmware/uwb/libsr200t_dev_fw.bin
+vendor/firmware/uwb/libsr200t_prod_fw.so
+
+# VPU firmware
+vendor/firmware/vpu30_2v.mbn
+vendor/firmware/vpu30_2v_unsigned.mbn
+vendor/firmware/vpu33_4v.mbn
+vendor/firmware/vpu33_4v_unsigned.mbn
+
+
+# Wi-Fi and Bluetooth firmware
+vendor/firmware/Data.msc
+vendor/firmware/bt_nvm_loading.xml
+vendor/firmware/hmtbtfw20.tlv
+vendor/firmware/hmtnv20.b20
+vendor/firmware/hmtnv20.b39
+vendor/firmware/hmtnv20.b3c
+vendor/firmware/kiwi/amss20.bin
+vendor/firmware/kiwi/bdwlan.elf
+vendor/firmware/kiwi/bdwlan.elf1
+vendor/firmware/kiwi/bdwlan.elf10
+vendor/firmware/kiwi/bdwlan.elf2
+vendor/firmware/kiwi/phy_ucode20.elf
+vendor/firmware/kiwi/qdss_trace_config_v2.cfg
+vendor/firmware/kiwi/regdb.bin
+vendor/firmware/wlan-connection-roaming-backup.ini
+vendor/firmware/wlan-connection-roaming.ini
+
+
+# Audio firmware (q6q: TI TAS25xx smart amp)
+vendor/firmware/tismartpa_driver_tuning.bin
+
+# Camera (q6q sensors, tuning and 3A)
+vendor/lib64/camera/com.samsung.sensormodule.0_lsi_rev04_s5kgn3.bin
+vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5kgn3.bin
+vendor/lib64/camera/com.samsung.sensormodule.11_sony_imx374.bin
+vendor/lib64/camera/com.samsung.sensormodule.12_sony_imx471_full.bin
+vendor/lib64/camera/com.samsung.sensormodule.13_sony_imx374_full.bin
+vendor/lib64/camera/com.samsung.sensormodule.1_sony_imx471.bin
+vendor/lib64/camera/com.samsung.sensormodule.2_lsi_s5k3lu.bin
+vendor/lib64/camera/com.samsung.sensormodule.3_lsi_s5k3k1.bin
+vendor/lib64/camera/com.samsung.tuned.lsi_s5k3k1.bin
+vendor/lib64/camera/com.samsung.tuned.lsi_s5kgn3.bin
+vendor/lib64/camera/com.samsung.tuned.sony_imx374.bin
+vendor/lib64/camera/com.samsung.tuned.sony_imx471.bin
+vendor/lib64/camera/components/com.ss.stats.impl_aec.so
+vendor/lib64/camera/components/com.ss.stats.impl_af.so
+vendor/lib64/camera/components/com.ss.stats.impl_awb.so
+vendor/lib64/camera/components/com.ss.stats.sec3awrapper.so
+vendor/lib64/camera/components/libTsAeFront_q6.so
+vendor/lib64/camera/components/libTsAe_q6.so
+vendor/lib64/libAIHRWrapper.camera.samsung.so
+vendor/lib64/libTsAf_Q6B6Q.so
+vendor/lib64/libTsAwbFront_Q6.so
+vendor/lib64/libTsAwb_Q6.so
+vendor/lib64/libarcsoft_udc_enhancement.so
+vendor/lib64/libtriplecam_image_optical_zoom.so
+vendor/lib64/libtriplecam_optical_zoom_control.so
+vendor/lib64/libtriplecam_video_optical_zoom.so
+vendor/lib64/libudc_core.camera.samsung.so
+
+# Display calibration (q6q panels)
+vendor/etc/display/qdcm_calib_data_Q6_S6E3FAE_AMB625GR01.json
+vendor/etc/display/qdcm_calib_data_Q6_S6E3XA5_AMF761GQ01.json
+vendor/firmware/Q6_S6E3FAE_AMB625GR01.dat
+vendor/firmware/Q6_S6E3XA5_AMF761GQ01.dat
+vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD_DSI1.dat
+
+# Fold: device state and display layout
+vendor/etc/devicestate/device_state_configuration.xml
+vendor/etc/displayconfig/display_layout_configuration.xml
+
+# Sensor configs (q6q)
+vendor/etc/sensors/config/lanai_ak991x_8.json
+vendor/etc/sensors/config/lanai_bmp5_1.json
+vendor/etc/sensors/config/lanai_lidangle_0.json
+vendor/etc/sensors/config/lanai_lsm6dsv_0_0.json
+vendor/etc/sensors/config/lanai_lsm6dsv_0_1.json
+vendor/etc/sensors/config/lanai_lsm6dsv_1_0.json
+vendor/etc/sensors/config/lanai_tcs3407_0.json
+vendor/etc/sensors/config/lanai_tmd4914_0.json
+vendor/etc/sensors/config/lsm6dsv_0.json
+vendor/etc/sensors/config/lsm6dsv_1.json
+vendor/etc/sensors/config/sns_gpio_handling_0.json
+
+# Touchscreen firmware (q6q)
+vendor/firmware/tsp_stm/fst2ca78y_q6.bin
+vendor/firmware/tsp_stm/fst3ca60y_q6.bin
+
+# Wacom firmware (q6q)
+vendor/firmware/wez01_q6.bin
+vendor/firmware/wez01_q6_old.bin

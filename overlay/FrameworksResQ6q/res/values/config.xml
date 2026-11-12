@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Galaxy Z Fold6 (q6q). Fold behaviour adapted from q5q; values are a first pass. -->
+
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- Cover (secondary built-in) display punch hole, from stock DisplayCutout (968x2376, density 2.625) -->
+    <string name="config_secondaryBuiltInDisplayCutout" translatable="false">M 0,0 H -12.95238095238095 V 33.52380952380952 H 12.95238095238095 V 0 H 0 Z @dp</string>
+
+    <!-- Physical displays: inner (port 131) and cover (port 132) -->
+    <string-array name="config_displayUniqueIdArray" translatable="false">
+        <item>"local:4630946165277524611"</item>
+        <item>"local:4630947194243491972"</item>
+    </string-array>
+
+    <!-- Device states come from stock vendor/etc/devicestate/device_state_configuration.xml:
+         0 = CLOSE (lid switch closed), 3 = OPEN -->
+    <integer-array name="config_foldedDeviceStates" translatable="false">
+        <item>0</item>
+    </integer-array>
+    <integer-array name="config_openDeviceStates" translatable="false">
+        <item>3</item>
+    </integer-array>
+    <integer-array name="config_halfFoldedDeviceStates" translatable="false">
+    </integer-array>
+    <integer-array name="config_rearDisplayDeviceStates" translatable="false">
+    </integer-array>
+    <integer-array name="config_deviceStatesOnWhichToWakeUp" translatable="false">
+        <item>3</item>
+    </integer-array>
+    <integer-array name="config_deviceStatesOnWhichToSleep" translatable="false">
+        <item>0</item>
+    </integer-array>
+    <string-array name="config_perDeviceStateRotationLockDefaults" translatable="false">
+        <item>0:1</item>
+        <item>3:2</item>
+    </string-array>
+
+    <item name="config_screenBrightnessSettingMinimumFloat" type="dimen">0.0</item>
+
+    <item name="config_screenBrightnessSettingMaximumFloat" type="dimen">1.0</item>
+
+    <item name="config_screenBrightnessSettingDefaultFloat" type="dimen">0.16732026</item>
+
+    <item name="config_screenBrightnessDimFloat" type="dimen">0.015686275</item>
+
+    <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>20000</item>
+        <item>50000</item>
+    </integer-array>
+
+    <integer-array name="config_autoBrightnessLcdBacklightValues">
+    </integer-array>
+
+    <integer-array name="config_autoBrightnessDisplayValuesNits">
+        <item>11</item>
+        <item>15</item>
+        <item>22</item>
+        <item>26</item>
+        <item>31</item>
+        <item>35</item>
+        <item>46</item>
+        <item>62</item>
+        <item>79</item>
+        <item>88</item>
+        <item>93</item>
+        <item>99</item>
+        <item>111</item>
+        <item>130</item>
+        <item>200</item>
+        <item>340</item>
+        <item>500</item>
+        <item>800</item>
+        <item>1000</item>
+        <item>1200</item>
+        <item>1400</item>
+        <item>1500</item>
+        <item>1500</item>
+        <item>1500</item>
+    </integer-array>
+
+    <bool name="config_allowRotationResolver">false</bool>
+
+    <bool name="config_unfoldTransitionEnabled">true</bool>
+
+    <bool name="config_unfoldTransitionHingeAngle">true</bool>
+
+    <bool name="config_windowManagerPauseRotationWhenUnfolding">true</bool>
+
+    <integer name="config_pauseRotationWhenUnfolding_maxHingeAngle">165</integer>
+
+    <integer name="config_pauseRotationWhenUnfolding_hingeEventTimeout">400</integer>
+
+    <integer name="config_pauseRotationWhenUnfolding_displaySwitchTimeout">1000</integer>
+
+    <bool name="config_systemCaptionsServiceCallsEnabled" translatable="false">true</bool>
+
+    <bool name="config_persistBrightnessNitsForDefaultDisplay">true</bool>
+
+    <bool name="config_supportsConcurrentInternalDisplays">false</bool>
+
+    <bool name="config_fold_lock_behavior">true</bool>
+
+</resources>
