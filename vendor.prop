@@ -5,3 +5,7 @@ ro.vendor.fingerprint.sensor_location=1856|1080|180|local:4630946165277524611;96
 
 # Radio
 ro.radio.noril=no
+
+# Display: inner panel is mounted rotated (same as stock F956B)
+ro.surface_flinger.primary_display_orientation=ORIENTATION_270
+debug.sf.ignore_hwc_physical_display_orientation=true
