@@ -70,6 +70,9 @@ TARGET_KERNEL_EXT_MODULES := \
 # Recovery
 # Inner panel is mounted rotated (installOrientation 3 on stock). GUESS: verify on device.
 TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_LEFT
+# minui does not rotate touch with the display; inner touch IC (fst2ca78y) needs matching rotation.
+# GUESS: LEFT; if taps are mirrored/swapped on device, try ROTATION_RIGHT.
+TARGET_RECOVERY_DEFAULT_TOUCH_ROTATION := ROTATION_LEFT
 
 # Vendor props
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
