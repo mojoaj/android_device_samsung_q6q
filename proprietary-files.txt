@@ -239,9 +239,7 @@ vendor/firmware/Q6_S6E3FAE_AMB625GR01.dat
 vendor/firmware/Q6_S6E3XA5_AMF761GQ01.dat
 vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD_DSI1.dat
 
-# Fold: device state and display layout
-vendor/etc/devicestate/device_state_configuration.xml
-vendor/etc/displayconfig/display_layout_configuration.xml
+# Fold: touchscreen to panel mapping
 vendor/etc/input-port-associations.xml
 
 # Sensor configs (q6q)

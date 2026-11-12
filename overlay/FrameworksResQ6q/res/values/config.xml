@@ -18,8 +18,8 @@
         <item>"local:4630947194243491972"</item>
     </string-array>
 
-    <!-- Device states come from stock vendor/etc/devicestate/device_state_configuration.xml:
-         0 = CLOSE (lid switch closed), 3 = OPEN -->
+    <!-- Device states come from configs/device_state_configuration.xml (hinge angle):
+         0 = CLOSE, 2 = HALF_OPENED, 3 = OPEN -->
     <integer-array name="config_foldedDeviceStates" translatable="false">
         <item>0</item>
     </integer-array>
@@ -27,10 +27,12 @@
         <item>3</item>
     </integer-array>
     <integer-array name="config_halfFoldedDeviceStates" translatable="false">
+        <item>2</item>
     </integer-array>
     <integer-array name="config_rearDisplayDeviceStates" translatable="false">
     </integer-array>
     <integer-array name="config_deviceStatesOnWhichToWakeUp" translatable="false">
+        <item>2</item>
         <item>3</item>
     </integer-array>
     <integer-array name="config_deviceStatesOnWhichToSleep" translatable="false">

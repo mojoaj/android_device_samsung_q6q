@@ -35,6 +35,11 @@ PRODUCT_PACKAGES += \
     SystemUIResQ6q \
     WifiResTargetQ6q
 
+# Fold: device states (hinge angle) and display layout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/device_state_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/devicestate/device_state_configuration.xml \
+    $(LOCAL_PATH)/configs/display_layout_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_layout_configuration.xml
+
 # Power
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
