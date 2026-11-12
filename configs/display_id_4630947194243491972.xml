@@ -8,54 +8,97 @@
      display (folded). Values not set here fall back to config.xml.
 -->
 <displayConfiguration>
-    <!-- GUESS: brightness-to-nits map borrowed from q5q (Fold5). Auto-brightness
-         stays off without one ("Screen brightness nits configuration is unavailable"). -->
+    <!-- From Samsung's kernel source (panel_data_file/Q6_S6E3FAE_AMB625GR01.dat, NORMAL and HBM
+         candela maps): backlight 0..12750 = brightness 0..1; 2550 = 500 nits is
+         the normal maximum, above that is outdoor HBM up to 2500 nits. -->
     <screenBrightnessMap>
         <point>
-            <value>0.0</value>
+            <value>0.000000</value>
             <nits>1</nits>
         </point>
         <point>
-            <value>0.015686</value>
-            <nits>10.39</nits>
+            <value>0.002353</value>
+            <nits>2</nits>
         </point>
         <point>
-            <value>0.041830</value>
-            <nits>34.6</nits>
+            <value>0.004706</value>
+            <nits>5</nits>
         </point>
         <point>
-            <value>0.083660</value>
-            <nits>83.72</nits>
+            <value>0.007843</value>
+            <nits>8</nits>
         </point>
         <point>
-            <value>0.167320</value>
-            <nits>204.69</nits>
+            <value>0.015608</value>
+            <nits>19</nits>
         </point>
         <point>
-            <value>0.250980</value>
-            <nits>346.06</nits>
+            <value>0.023529</value>
+            <nits>32</nits>
         </point>
         <point>
-            <value>0.333333</value>
+            <value>0.039216</value>
+            <nits>61</nits>
+        </point>
+        <point>
+            <value>0.054902</value>
+            <nits>94</nits>
+        </point>
+        <point>
+            <value>0.078431</value>
+            <nits>149</nits>
+        </point>
+        <point>
+            <value>0.101882</value>
+            <nits>209</nits>
+        </point>
+        <point>
+            <value>0.125490</value>
+            <nits>273</nits>
+        </point>
+        <point>
+            <value>0.156784</value>
+            <nits>365</nits>
+        </point>
+        <point>
+            <value>0.180392</value>
+            <nits>437</nits>
+        </point>
+        <point>
+            <value>0.200000</value>
             <nits>500</nits>
         </point>
         <point>
-            <value>0.522876</value>
-            <nits>784</nits>
+            <value>0.313725</value>
+            <nits>785</nits>
         </point>
         <point>
-            <value>0.666667</value>
-            <nits>1000</nits>
+            <value>0.470588</value>
+            <nits>1177</nits>
         </point>
         <point>
-            <value>0.800000</value>
-            <nits>1200</nits>
+            <value>0.627451</value>
+            <nits>1569</nits>
         </point>
         <point>
-            <value>1.0</value>
-            <nits>1500</nits>
+            <value>0.784314</value>
+            <nits>1961</nits>
+        </point>
+        <point>
+            <value>1.000000</value>
+            <nits>2500</nits>
         </point>
     </screenBrightnessMap>
+    <!-- Above 500 nits only with auto-brightness in bright light, like stock. -->
+    <highBrightnessMode enabled="true">
+        <transitionPoint>0.200000</transitionPoint>
+        <minimumLux>5000</minimumLux>
+        <timing>
+            <timeWindowSecs>0</timeWindowSecs>
+            <timeMaxSecs>0</timeMaxSecs>
+            <timeMinSecs>0</timeMinSecs>
+        </timing>
+    </highBrightnessMode>
     <autoBrightness enabled="true" />
     <refreshRate>
         <defaultRefreshRate>0</defaultRefreshRate>

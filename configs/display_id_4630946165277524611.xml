@@ -3,73 +3,114 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 
-     Inner panel (S6E3XA5, port 131). Uses touchscreen proximity
+     Inner panel (S6E3XA5, port 131). Disables proximity
      (see below) and sets 120 Hz. Values not set here fall back to
      config.xml.
 -->
 <displayConfiguration>
-    <!-- GUESS: brightness-to-nits map borrowed from q5q (Fold5). Auto-brightness
-         stays off without one ("Screen brightness nits configuration is unavailable"). -->
+    <!-- From Samsung's kernel source (panel_data_file/Q6_S6E3XA5_AMF761GQ01.dat, NORMAL and HBM
+         candela maps): backlight 0..12750 = brightness 0..1; 2550 = 500 nits is
+         the normal maximum, above that is outdoor HBM up to 2500 nits. -->
     <screenBrightnessMap>
         <point>
-            <value>0.0</value>
+            <value>0.000000</value>
             <nits>1</nits>
         </point>
         <point>
-            <value>0.015686</value>
-            <nits>10.39</nits>
+            <value>0.002353</value>
+            <nits>2</nits>
         </point>
         <point>
-            <value>0.041830</value>
-            <nits>34.6</nits>
+            <value>0.004706</value>
+            <nits>4</nits>
         </point>
         <point>
-            <value>0.083660</value>
-            <nits>83.72</nits>
+            <value>0.007843</value>
+            <nits>8</nits>
         </point>
         <point>
-            <value>0.167320</value>
-            <nits>204.69</nits>
+            <value>0.015608</value>
+            <nits>19</nits>
         </point>
         <point>
-            <value>0.250980</value>
-            <nits>346.06</nits>
+            <value>0.023529</value>
+            <nits>31</nits>
         </point>
         <point>
-            <value>0.333333</value>
+            <value>0.039216</value>
+            <nits>61</nits>
+        </point>
+        <point>
+            <value>0.054902</value>
+            <nits>93</nits>
+        </point>
+        <point>
+            <value>0.078431</value>
+            <nits>148</nits>
+        </point>
+        <point>
+            <value>0.101882</value>
+            <nits>208</nits>
+        </point>
+        <point>
+            <value>0.125490</value>
+            <nits>273</nits>
+        </point>
+        <point>
+            <value>0.156784</value>
+            <nits>364</nits>
+        </point>
+        <point>
+            <value>0.180392</value>
+            <nits>437</nits>
+        </point>
+        <point>
+            <value>0.200000</value>
             <nits>500</nits>
         </point>
         <point>
-            <value>0.522876</value>
-            <nits>784</nits>
+            <value>0.313725</value>
+            <nits>785</nits>
         </point>
         <point>
-            <value>0.666667</value>
-            <nits>1000</nits>
+            <value>0.470588</value>
+            <nits>1177</nits>
         </point>
         <point>
-            <value>0.800000</value>
-            <nits>1200</nits>
+            <value>0.627451</value>
+            <nits>1569</nits>
         </point>
         <point>
-            <value>1.0</value>
-            <nits>1500</nits>
+            <value>0.784314</value>
+            <nits>1961</nits>
+        </point>
+        <point>
+            <value>1.000000</value>
+            <nits>2500</nits>
         </point>
     </screenBrightnessMap>
+    <!-- Above 500 nits only with auto-brightness in bright light, like stock. -->
+    <highBrightnessMode enabled="true">
+        <transitionPoint>0.200000</transitionPoint>
+        <minimumLux>5000</minimumLux>
+        <timing>
+            <timeWindowSecs>0</timeWindowSecs>
+            <timeMaxSecs>0</timeMaxSecs>
+            <timeMinSecs>0</timeMinSecs>
+        </timing>
+    </highBrightnessMode>
     <autoBrightness enabled="true" />
     <refreshRate>
         <defaultRefreshRate>0</defaultRefreshRate>
         <defaultPeakRefreshRate>120</defaultPeakRefreshRate>
     </refreshRate>
-    <!-- Both real proximity sensors (virtual_prox, tmd4914_sub) face the cover
-         side, i.e. the back when unfolded (b17 test), so they would blank the
-         inner screen from the back. With no sensor at all (b18) the dialer
-         sees "no proximity wake lock" when a call starts unfolded and then
-         never uses proximity, even after folding.
-         GUESS: Samsung's touchscreen proximity keeps proximity "available"
-         without reacting to the back. -->
+    <!-- No proximity sensor: both real ones (virtual_prox, tmd4914_sub) face the
+         cover side, i.e. the back when unfolded (b17 test). Touch Proximity (b19)
+         is the cover touchscreen's ear detect, reports 0 for "far" and blanked
+         the inner screen at random. Empty values = no sensor; the framework
+         still reports proximity wake lock support (local patch). -->
     <proxSensor>
-        <type>com.samsung.sensor.touch_proximity</type>
-        <name>Touch Proximity Sensor</name>
+        <type></type>
+        <name></name>
     </proxSensor>
 </displayConfiguration>
