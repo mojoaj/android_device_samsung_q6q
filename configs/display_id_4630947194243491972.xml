@@ -12,4 +12,10 @@
         <defaultRefreshRate>0</defaultRefreshRate>
         <defaultPeakRefreshRate>120</defaultPeakRefreshRate>
     </refreshRate>
+    <!-- Under-display IR proximity by the cover panel (also fed by the
+         cover touchscreen's ear detection on the ADSP). -->
+    <proxSensor>
+        <type>android.sensor.proximity</type>
+        <name>IR Proximity virtual_prox Sensor Wakeup</name>
+    </proxSensor>
 </displayConfiguration>

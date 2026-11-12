@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+
+     Inner panel (S6E3XA5, port 131). Only overrides the proximity sensor:
+     the default one (virtual_prox) sits by the cover panel, i.e. on the back
+     of the phone when it is unfolded. Values not set here fall back to
+     config.xml.
+-->
+<displayConfiguration>
+    <refreshRate>
+        <defaultRefreshRate>0</defaultRefreshRate>
+        <defaultPeakRefreshRate>120</defaultPeakRefreshRate>
+    </refreshRate>
+    <!-- GUESS: the ams TMD4914 "sub" optic is on the inner side. -->
+    <proxSensor>
+        <type>com.samsung.sensor.proximity_sub</type>
+        <name>tmd4914_sub Proximity Sensor Wakeup</name>
+    </proxSensor>
+</displayConfiguration>
