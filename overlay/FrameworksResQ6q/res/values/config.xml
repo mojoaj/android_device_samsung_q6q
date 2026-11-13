@@ -9,13 +9,29 @@
 
     <integer name="config_defaultPeakRefreshRate">120</integer>
 
+    <!-- Inner (main built-in) display: under-display camera. Stock keeps this circle in
+         config_mainBuiltInDisplayCutoutForUDC (same density 420); we use it as the real
+         cutout so the status bar keeps its icons clear of the camera. -->
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">M 173.3333333333333,0 M 173.3333333333333,9.904761904761905 a 10.28571428571429,10.28571428571429 0 1,0 0,22.0952380952381 a 10.28571428571429,10.28571428571429 0 1,0 0,-22.0952380952381 z @dp</string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation" translatable="false">M 162.2857142857143,0 H 184.3809523809524 V 32 H 162.2857142857143 Z @dp</string>
+
     <!-- Cover (secondary built-in) display punch hole, from stock DisplayCutout (968x2376, density 2.625) -->
     <string name="config_secondaryBuiltInDisplayCutout" translatable="false">M 0,0 H -12.95238095238095 V 33.52380952380952 H 12.95238095238095 V 0 H 0 Z @dp</string>
+    <string name="config_secondaryBuiltInDisplayCutoutRectApproximation" translatable="false">@string/config_secondaryBuiltInDisplayCutout</string>
 
-    <!-- Physical displays: inner (port 131) and cover (port 132) -->
+    <!-- Physical displays: inner (port 131) and cover (port 132). The per-display arrays
+         below are indexed in this order. -->
     <string-array name="config_displayUniqueIdArray" translatable="false">
         <item>"local:4630946165277524611"</item>
         <item>"local:4630947194243491972"</item>
+    </string-array>
+    <string-array name="config_displayCutoutPathArray" translatable="false">
+        <item>@string/config_mainBuiltInDisplayCutout</item>
+        <item>@string/config_secondaryBuiltInDisplayCutout</item>
+    </string-array>
+    <string-array name="config_displayCutoutApproximationRectArray" translatable="false">
+        <item>@string/config_mainBuiltInDisplayCutoutRectApproximation</item>
+        <item>@string/config_secondaryBuiltInDisplayCutoutRectApproximation</item>
     </string-array>
 
     <!-- Device states come from configs/device_state_configuration.xml (hinge angle):

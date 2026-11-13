@@ -6,4 +6,11 @@
 <resources>
     <!-- Rounded corners from stock DisplayDeviceInfo (inner 11px, cover 16px) -->
     <dimen name="rounded_corner_radius">16px</dimen>
+
+    <!-- Status bar height. There is no per-display array in frameworks: the height is
+         max(cutout top inset, status_bar_height_default), so it is set per screen size
+         (values = cover, values-sw600dp = inner). Stock: 95px cover, 94px inner. -->
+    <dimen name="status_bar_height_default">95px</dimen>
+    <dimen name="status_bar_height_portrait">95px</dimen>
+    <dimen name="status_bar_height_landscape">95px</dimen>
 </resources>

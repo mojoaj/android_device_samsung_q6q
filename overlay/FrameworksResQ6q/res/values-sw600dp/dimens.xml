@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Inner screen status bar height (stock: 94px) -->
+    <dimen name="status_bar_height_default">94px</dimen>
+    <dimen name="status_bar_height_portrait">94px</dimen>
+    <dimen name="status_bar_height_landscape">94px</dimen>
+</resources>
