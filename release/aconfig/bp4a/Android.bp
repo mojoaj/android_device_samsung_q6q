@@ -1,0 +1,9 @@
+// SPDX-FileCopyrightText: 2026 Anthony Mckeever
+// SPDX-License-Identifier: Apache-2.0
+
+aconfig_value_set {
+    name: "aconfig_value_set-q6q-bp4a",
+    srcs: [
+        "*/Android.bp",
+    ],
+}

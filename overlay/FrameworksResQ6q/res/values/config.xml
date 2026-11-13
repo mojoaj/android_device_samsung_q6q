@@ -106,56 +106,72 @@
 
     <item name="config_screenBrightnessDimFloat" type="dimen">0.015686275</item>
 
-    <!-- Lux -> nits curve. Indoors (100-500 lux) stock aims for ~140 nits
-         (its config_autoBrightnessLcdBacklightValues via the panel candela map);
-         ours is a little brighter. Above 5000 lux uses outdoor HBM. -->
+    <!-- Lux -> nits curve, stock BYGB's (logs/stock-BYGB/FINDINGS.md). Same on both
+         panels. Above 500 nits needs HBM (from 3000 lux, display configs). -->
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
+        <item>2</item>
         <item>3</item>
+        <item>4</item>
         <item>5</item>
         <item>10</item>
+        <item>15</item>
         <item>20</item>
+        <item>25</item>
         <item>50</item>
         <item>100</item>
-        <item>200</item>
-        <item>400</item>
-        <item>700</item>
+        <item>300</item>
+        <item>500</item>
         <item>1000</item>
         <item>2000</item>
         <item>3000</item>
+        <item>4000</item>
         <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
         <item>10000</item>
-        <item>20000</item>
-        <item>40000</item>
+        <item>12000</item>
     </integer-array>
 
     <integer-array name="config_autoBrightnessLcdBacklightValues">
     </integer-array>
 
     <integer-array name="config_autoBrightnessDisplayValuesNits">
-        <item>5</item>
-        <item>8</item>
-        <item>12</item>
-        <item>18</item>
-        <item>30</item>
-        <item>55</item>
-        <item>110</item>
-        <item>150</item>
-        <item>190</item>
-        <item>240</item>
-        <item>290</item>
-        <item>360</item>
-        <item>430</item>
-        <item>500</item>
+        <item>11</item>
+        <item>15</item>
+        <item>22</item>
+        <item>26</item>
+        <item>31</item>
+        <item>35</item>
+        <item>46</item>
+        <item>62</item>
+        <item>79</item>
+        <item>88</item>
+        <item>93</item>
+        <item>99</item>
+        <item>111</item>
+        <item>130</item>
+        <item>200</item>
+        <item>400</item>
+        <item>600</item>
         <item>800</item>
-        <item>1300</item>
+        <item>1000</item>
+        <item>1200</item>
+        <item>1400</item>
+        <item>1600</item>
         <item>1800</item>
-        <item>2400</item>
+        <item>2000</item>
+        <item>2500</item>
     </integer-array>
 
-    <!-- React faster than AOSP's 4 s / 8 s -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+    <!-- Stock: brighten after 1 s, darken after 2 s -->
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">2000</integer>
+
+    <!-- Stock keeps a manual adjustment for 10 minutes -->
+    <integer name="config_autoBrightnessShortTermModelTimeout">600000</integer>
 
     <!-- After a fold/unfold the sensor hub needs ~0.5-1 s to bring the other optic up;
          until then it reports stale, too-dark values. Ignore readings for 1 s after the
@@ -186,8 +202,9 @@
     <bool name="config_fold_lock_behavior">true</bool>
 
     <!-- Side fingerprint sensor (side key), per display, natural orientation.
-         X = right edge, Y = key centre measured with pointer location.
-         Radius ~ half the key length (GUESS: ~7.5 mm). -->
+         X = right edge. SystemUI (SideFpsSensorInteractor) takes Y as the TOP of the
+         sensor and draws the hint over 2 x radius, so Y = measured key centre - radius
+         (inner 1020 - 110, cover 1095 - 120). Radius ~ half the key length (GUESS). -->
     <array name="config_sfps_sensor_props" translatable="false">
         <item>@array/config_sfps_sensor_props_inner</item>
         <item>@array/config_sfps_sensor_props_cover</item>
@@ -195,13 +212,13 @@
     <array name="config_sfps_sensor_props_inner" translatable="false">
         <item>local:4630946165277524611</item>
         <item>1856</item>
-        <item>1020</item>
+        <item>910</item>
         <item>110</item>
     </array>
     <array name="config_sfps_sensor_props_cover" translatable="false">
         <item>local:4630947194243491972</item>
         <item>968</item>
-        <item>1095</item>
+        <item>975</item>
         <item>120</item>
     </array>
 </resources>

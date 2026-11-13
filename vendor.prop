@@ -1,7 +1,7 @@
 # Fingerprint (side-mounted, in the power key)
 # GUESS: sensor_location (x|y|radius|display) to be tuned on device
 ro.vendor.fingerprint.type=side
-ro.vendor.fingerprint.sensor_location=1856|1080|180|local:4630946165277524611;968|1188|180|local:4630947194243491972
+ro.vendor.fingerprint.sensor_location=1856|910|110|local:4630946165277524611;968|975|120|local:4630947194243491972
 
 # Radio
 ro.radio.noril=no

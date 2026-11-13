@@ -10,8 +10,9 @@
 
     <!-- Status bar height. There is no per-display array in frameworks: the height is
          max(cutout top inset, status_bar_height_default), so it is set per screen size
-         (values = cover, values-sw600dp = inner). Stock: 95px cover, 94px inner. -->
-    <dimen name="status_bar_height_default">95px</dimen>
-    <dimen name="status_bar_height_portrait">95px</dimen>
-    <dimen name="status_bar_height_landscape">95px</dimen>
+         (values = cover, values-sw600dp = inner). Stock BYGB cover: 88px portrait (= the
+         punch-hole cutout height), 63px landscape (logs/stock-BYGB/dumpsys-window.txt). -->
+    <dimen name="status_bar_height_default">88px</dimen>
+    <dimen name="status_bar_height_portrait">88px</dimen>
+    <dimen name="status_bar_height_landscape">63px</dimen>
 </resources>

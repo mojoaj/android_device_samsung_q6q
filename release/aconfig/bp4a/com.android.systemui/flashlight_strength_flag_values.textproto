@@ -1,0 +1,8 @@
+# The rear flash supports 5 torch levels (android.flash.info.strengthMaximumLevel = 5,
+# as stock). Lets the QS flashlight tile open a strength slider.
+flag_value {
+  package: "com.android.systemui"
+  name: "flashlight_strength"
+  state: ENABLED
+  permission: READ_ONLY
+}
