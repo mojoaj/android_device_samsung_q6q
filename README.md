@@ -2,7 +2,7 @@
 
 Unofficial LineageOS 23.2 device tree for the Snapdragon 8 Gen 3 Galaxy Z Fold6.
 
-Maintainer and author of the q6q port: **Anthony Mckeever** ([contact@anthonymckeever.com](mailto:contact@anthonymckeever.com))
+Maintained by [mojoaj](https://github.com/mojoaj).
 
 | | |
 |---|---|
