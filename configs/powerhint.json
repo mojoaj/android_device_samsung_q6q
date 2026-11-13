@@ -256,8 +256,8 @@
       "ResetOnInit": true
     },
     {
-      "Name": "TouchscreenEnable",
-      "Path": "/sys/class/sec/tsp/enabled",
+      "Name": "TouchscreenEnableInner",
+      "Path": "/sys/class/sec/tsp1/enabled",
       "Values": [
           "2,1",
           "1,0"
@@ -265,8 +265,26 @@
       "ResetOnInit": true
     },
     {
-      "Name": "DoubleTapToWakeEnable",
-      "Path": "/sys/class/sec/tsp/cmd",
+      "Name": "TouchscreenEnableCover",
+      "Path": "/sys/class/sec/tsp2/enabled",
+      "Values": [
+          "2,1",
+          "1,0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "DoubleTapToWakeEnableInner",
+      "Path": "/sys/class/sec/tsp1/cmd",
+      "Values": [
+          "aot_enable,0",
+          "aot_enable,1"
+      ],
+      "DefaultIndex": 0
+    },
+    {
+      "Name": "DoubleTapToWakeEnableCover",
+      "Path": "/sys/class/sec/tsp2/cmd",
       "Values": [
           "aot_enable,0",
           "aot_enable,1"
@@ -670,7 +688,13 @@
     },
     {
       "PowerHint": "INTERACTIVE",
-      "Node": "TouchscreenEnable",
+      "Node": "TouchscreenEnableInner",
+      "Duration": 0,
+      "Value": "2,1"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "TouchscreenEnableCover",
       "Duration": 0,
       "Value": "2,1"
     },
@@ -682,7 +706,13 @@
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
-      "Node": "DoubleTapToWakeEnable",
+      "Node": "DoubleTapToWakeEnableInner",
+      "Duration": 0,
+      "Value": "aot_enable,1"
+    },
+    {
+      "PowerHint": "DOUBLE_TAP_TO_WAKE",
+      "Node": "DoubleTapToWakeEnableCover",
       "Duration": 0,
       "Value": "aot_enable,1"
     },
