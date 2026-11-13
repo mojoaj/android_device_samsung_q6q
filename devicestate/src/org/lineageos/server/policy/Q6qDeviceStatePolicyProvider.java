@@ -32,6 +32,12 @@ import com.android.server.policy.feature.flags.FeatureFlagsImpl;
  *   starting angle and sees an unfold that happens while the AP is suspended.
  * - Accelerometers: main "lsm6dsv" is in the inner-only half, "LSM6DSVW ... Sub" is in
  *   the cover-screen half (closed and lying cover up: sub z=-9.8, main z=+9.8).
+ * - Closed-state hysteresis: BookStyle treats any angle above exactly 0 as "opening" and
+ *   moves to the inner screen. Folding Angle steps through 1-4 degrees when the folded
+ *   phone is just held or squeezed, which turned the inner screen on and then locked the
+ *   phone when it read 0 again. All angle events therefore pass through
+ *   {@link ClosedHysteresis}: after a 0 reading, angles below OPEN_ANGLE_DEGREES are
+ *   reported as 0.
  */
 public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider {
     private static final String TAG = "Q6qDeviceStatePolicy";
@@ -95,17 +101,33 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
                 new FeatureFlagsImpl(), context, hinge, hall, left, right,
                 /* closeAngleDegrees= */ null);
 
-        if (foldingState != null && hinge != foldingState
-                && policy.getDeviceStateProvider() instanceof SensorEventListener) {
-            final SensorEventListener target =
-                    (SensorEventListener) policy.getDeviceStateProvider();
-            final Sensor hingeSensor = hinge;
+        if (!(policy.getDeviceStateProvider() instanceof SensorEventListener)) {
+            Slog.w(TAG, "Provider is not a SensorEventListener, hinge hysteresis disabled");
+            return policy;
+        }
+        final SensorEventListener target = (SensorEventListener) policy.getDeviceStateProvider();
+        final ClosedHysteresis filter = new ClosedHysteresis(target, hinge);
+
+        if (hinge == foldingAngle) {
+            // Take the raw Folding Angle stream away from the provider and feed it filtered.
+            sm.unregisterListener(target, foldingAngle);
+            sm.registerListener(new SensorEventListener() {
+                @Override
+                public void onSensorChanged(SensorEvent event) {
+                    filter.onAngle(event.values[0], event.accuracy, event.timestamp);
+                }
+
+                @Override
+                public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+            }, foldingAngle, SensorManager.SENSOR_DELAY_FASTEST);
+        }
+
+        if (foldingState != null && hinge != foldingState) {
             sm.registerListener(new SensorEventListener() {
                 @Override
                 public void onSensorChanged(SensorEvent event) {
                     if (event.values.length < 2) return;
-                    target.onSensorChanged(new SensorEvent(hingeSensor, event.accuracy,
-                            event.timestamp, new float[] { event.values[1] }));
+                    filter.onAngle(event.values[1], event.accuracy, event.timestamp);
                 }
 
                 @Override
@@ -114,5 +136,48 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
         }
 
         return policy;
+    }
+
+    /**
+     * Holds the hinge at 0 degrees after the phone has been fully closed until the angle
+     * reaches OPEN_ANGLE_DEGREES (BookStyle's own end of the closed band). A real unfold
+     * passes 1-5 degrees within ~150 ms (logs/foldlog-2.txt), so this adds no visible delay.
+     */
+    private static final class ClosedHysteresis {
+        private static final float OPEN_ANGLE_DEGREES = 5f;
+
+        private final SensorEventListener mTarget;
+        private final Sensor mHinge;
+        private boolean mClosedLatched = false;
+        private float mMaxSuppressed = 0f;
+
+        ClosedHysteresis(SensorEventListener target, Sensor hinge) {
+            mTarget = target;
+            mHinge = hinge;
+        }
+
+        synchronized void onAngle(float angle, int accuracy, long timestamp) {
+            float reported = angle;
+            if (angle <= 0f) {
+                if (!mClosedLatched) {
+                    mClosedLatched = true;
+                    mMaxSuppressed = 0f;
+                }
+            } else if (mClosedLatched) {
+                if (angle < OPEN_ANGLE_DEGREES) {
+                    if (angle > mMaxSuppressed) {
+                        mMaxSuppressed = angle;
+                        Slog.i(TAG, "Closed: ignoring hinge bounce to " + angle + " deg");
+                    }
+                    reported = 0f;
+                } else {
+                    mClosedLatched = false;
+                    Slog.i(TAG, "Opened: hinge " + angle + " deg (max ignored bounce "
+                            + mMaxSuppressed + ")");
+                }
+            }
+            mTarget.onSensorChanged(new SensorEvent(mHinge, accuracy, timestamp,
+                    new float[] { reported }));
+        }
     }
 }
