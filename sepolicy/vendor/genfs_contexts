@@ -1,1 +1,6 @@
+#
+# SPDX-FileCopyrightText: 2026 Anthony Mckeever
+# SPDX-License-Identifier: Apache-2.0
+#
+
 genfscon sysfs /devices/virtual/sec/digital_hall u:object_r:sysfs_sec_digital_hall:s0

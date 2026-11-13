@@ -1,3 +1,7 @@
+<!--
+     SPDX-FileCopyrightText: 2026 Anthony Mckeever
+     SPDX-License-Identifier: Apache-2.0
+-->
 <manifest version="1.0" type="device">
     <!-- q6q: only advertise touch features confirmed on the Fold6 (glove: cmd_list; HTPR: HAL registered it on device).
          The common manifest also declares IHighTouchPollingRate / ITouchscreenGesture; if those

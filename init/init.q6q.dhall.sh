@@ -1,6 +1,6 @@
 #!/vendor/bin/sh
 #
-# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-FileCopyrightText: 2026 Anthony Mckeever
 # SPDX-License-Identifier: Apache-2.0
 #
 # Load this unit's factory switch thresholds into the AKM digital hall.

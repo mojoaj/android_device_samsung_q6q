@@ -1,6 +1,7 @@
 #!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
 #
 # SPDX-FileCopyrightText: 2024-2026 The LineageOS Project
+# SPDX-FileCopyrightText: 2026 Anthony Mckeever
 # SPDX-License-Identifier: Apache-2.0
 #
 

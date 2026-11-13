@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2026 Anthony Mckeever
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # Samsung sensor factory daemon: feeds panel state/brightness and
 # calibration to the under-display light/proximity sensors on the ADSP.
 allow factory_ssc { vendor_sysfs_display vendor_sysfs_graphics }:dir r_dir_perms;

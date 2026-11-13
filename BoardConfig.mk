@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2023-2026 The LineageOS Project
+# Copyright (C) 2026 Anthony Mckeever
 #
 # SPDX-License-Identifier: Apache-2.0
 #

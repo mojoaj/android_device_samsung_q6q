@@ -1,1 +1,6 @@
+#
+# SPDX-FileCopyrightText: 2026 Anthony Mckeever
+# SPDX-License-Identifier: Apache-2.0
+#
+
 type sysfs_sec_digital_hall, sysfs_type, fs_type;

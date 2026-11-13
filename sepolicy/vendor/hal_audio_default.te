@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2026 Anthony Mckeever
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # TAS25xx smart amp: speaker calibration (calib_re) lives on /efs
 allow hal_audio_default efs_file:dir r_dir_perms;
 allow hal_audio_default efs_file:file r_file_perms;
