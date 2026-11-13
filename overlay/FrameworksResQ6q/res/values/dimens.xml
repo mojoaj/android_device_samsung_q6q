@@ -13,8 +13,10 @@
          (values = cover, values-sw600dp = inner). Stock BYGB cover: 88px portrait (= the
          punch-hole cutout height) with icons pushed down to the camera's centre line (y=56.5);
          63px landscape (logs/stock-BYGB/dumpsys-window.txt). Our icons are centred in the bar,
-         so the cover bar is 116px instead, which puts them level with the camera (user choice). -->
-    <dimen name="status_bar_height_default">116px</dimen>
-    <dimen name="status_bar_height_portrait">116px</dimen>
+         so the cover bar is 112px in portrait instead (clock centre y=56.5, level with the
+         camera; user choice) and 63px in landscape like stock. Portrait/landscape need the
+         frameworks/base SystemBarUtils patch (AOSP only uses status_bar_height_default). -->
+    <dimen name="status_bar_height_default">112px</dimen>
+    <dimen name="status_bar_height_portrait">112px</dimen>
     <dimen name="status_bar_height_landscape">63px</dimen>
 </resources>
