@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 Anthony Mckeever
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Unofficial build: point changelog and bug reports at the q6q project, not lineageos.org -->
+    <string name="menu_changelog_url" translatable="false">https://github.com/mojoaj/lineage_q6q_ota/releases</string>
+    <string name="report_issue_url" translatable="false">https://github.com/mojoaj/android_device_samsung_q6q/issues</string>
+</resources>

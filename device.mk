@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
     FrameworksResQ6q \
     LineageResQ6q \
     SystemUIResQ6q \
+    UpdaterResQ6q \
     WifiResTargetQ6q
 
 # Fold: device state policy (AOSP BookStyle, system server extension)
