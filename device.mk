@@ -9,6 +9,10 @@
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# OTA updates (Updater app): JSON published at github.com/mojoaj/lineage_q6q_ota
+PRODUCT_SYSTEM_PROPERTIES += \
+    lineage.updater.uri=https://raw.githubusercontent.com/mojoaj/lineage_q6q_ota/main/q6q.json
+
 # Boot animation (cover screen size; multi-display below)
 TARGET_SCREEN_HEIGHT := 2376
 TARGET_SCREEN_WIDTH := 968
