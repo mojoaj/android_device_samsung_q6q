@@ -35,9 +35,14 @@ PRODUCT_PACKAGES += \
     SystemUIResQ6q \
     WifiResTargetQ6q
 
-# Fold: device states (hinge angle) and display layout
+# Fold: device state policy (AOSP BookStyle, system server extension)
+PRODUCT_PACKAGES += \
+    q6q-devicestate
+PRODUCT_SYSTEM_SERVER_JARS += \
+    system_ext:q6q-devicestate
+
+# Fold: display layout per device state
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/device_state_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/devicestate/device_state_configuration.xml \
     $(LOCAL_PATH)/configs/display_layout_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_layout_configuration.xml \
     $(LOCAL_PATH)/configs/display_id_4630946165277524611.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946165277524611.xml \
     $(LOCAL_PATH)/configs/display_id_4630947194243491972.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947194243491972.xml

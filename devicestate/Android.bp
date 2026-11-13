@@ -1,0 +1,14 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// System server extension: book-style device state policy for the Galaxy Z Fold6.
+java_library {
+    name: "q6q-devicestate",
+    srcs: ["src/**/*.java"],
+    libs: ["services"],
+    static_libs: ["foldable-device-state-provider"],
+    system_ext_specific: true,
+    installable: true,
+}

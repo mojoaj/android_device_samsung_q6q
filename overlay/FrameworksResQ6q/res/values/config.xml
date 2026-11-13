@@ -34,28 +34,43 @@
         <item>@string/config_secondaryBuiltInDisplayCutoutRectApproximation</item>
     </string-array>
 
-    <!-- Device states come from configs/device_state_configuration.xml (hinge angle):
-         0 = CLOSE, 2 = HALF_OPENED, 3 = OPEN -->
+    <!-- Device states come from AOSP BookStyleDeviceStatePolicy, wrapped by
+         devicestate/ (Q6qDeviceStatePolicyProvider, system_ext:q6q-devicestate):
+         0 CLOSED, 1 HALF_OPENED, 2 OPENED, 3 REAR_DISPLAY, 4 CONCURRENT_INNER_DEFAULT,
+         5 REAR_DISPLAY_OUTER_DEFAULT. Tent/wedge mode keeps the cover screen on
+         until ~90 degrees when unfolding a little. -->
+    <string name="config_deviceSpecificDeviceStatePolicyProvider" translatable="false">org.lineageos.server.policy.Q6qDeviceStatePolicyProvider</string>
     <integer-array name="config_foldedDeviceStates" translatable="false">
         <item>0</item>
     </integer-array>
-    <integer-array name="config_openDeviceStates" translatable="false">
-        <item>3</item>
-    </integer-array>
     <integer-array name="config_halfFoldedDeviceStates" translatable="false">
+        <item>1</item>
+    </integer-array>
+    <integer-array name="config_openDeviceStates" translatable="false">
         <item>2</item>
     </integer-array>
     <integer-array name="config_rearDisplayDeviceStates" translatable="false">
+        <item>3</item>
+        <item>5</item>
     </integer-array>
+    <integer-array name="config_concurrentDisplayDeviceStates" translatable="false">
+        <item>4</item>
+    </integer-array>
+    <integer name="config_deviceStateRearDisplay">3</integer>
+    <integer name="config_deviceStateConcurrentRearDisplay">4</integer>
+    <string name="config_rearDisplayPhysicalAddress" translatable="false">4630947194243491972</string>
 
     <!-- Jetpack WindowManager hinge (FoldingFeature) for apps like YouTube flex mode.
          Inner screen is 1856x2160 at rotation 0 with the hinge running top to bottom. -->
     <string name="config_display_features" translatable="false">fold-[928,0,928,2160]</string>
-    <!-- DeviceState:Jetpack posture (1 closed, 2 half-opened, 3 opened) -->
+    <!-- DeviceState:Jetpack posture (1 closed, 2 half-opened, 3 opened, 1000 concurrent) -->
     <string-array name="config_device_state_postures" translatable="false">
         <item>0:1</item>
-        <item>2:2</item>
-        <item>3:3</item>
+        <item>1:2</item>
+        <item>2:3</item>
+        <item>3:1</item>
+        <item>4:1000</item>
+        <item>5:1</item>
     </string-array>
     <!-- Half-folded with the hinge horizontal (rotated 90/270) is tabletop -->
     <integer-array name="config_deviceTabletopRotations" translatable="false">
@@ -63,8 +78,8 @@
         <item>270</item>
     </integer-array>
     <integer-array name="config_deviceStatesOnWhichToWakeUp" translatable="false">
+        <item>1</item>
         <item>2</item>
-        <item>3</item>
     </integer-array>
     <integer-array name="config_deviceStatesOnWhichToSleep" translatable="false">
         <item>0</item>
@@ -72,8 +87,9 @@
     <!-- The rotation sensor's frame matches the cover screen; seen from the inner
          screen (half-open/open) left and right are swapped. -->
     <integer-array name="config_deviceStatesToReverseDefaultDisplayRotationAroundZAxis" translatable="false">
+        <item>1</item>
         <item>2</item>
-        <item>3</item>
+        <item>4</item>
     </integer-array>
     <string-array name="config_perDeviceStateRotationLockDefaults" translatable="false">
         <!-- posture:value[:fallback] - 0 folded, 1 half-folded, 2 unfolded -->
