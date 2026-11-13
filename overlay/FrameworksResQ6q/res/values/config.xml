@@ -27,7 +27,7 @@
         <item>@string/config_secondaryBuiltInDisplayCutout</item>
     </string-array>
     <string-array name="config_displayCutoutApproximationRectArray" translatable="false">
-        <item>@string/config_mainBuiltInDisplayCutoutRectApproximation</item>
+        <item>@string/config_mainBuiltInDisplayCutout</item>
         <item>@string/config_secondaryBuiltInDisplayCutoutRectApproximation</item>
     </string-array>
 
