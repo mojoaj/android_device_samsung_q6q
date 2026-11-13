@@ -91,7 +91,8 @@
     </integer-array>
     <string-array name="config_perDeviceStateRotationLockDefaults" translatable="false">
         <!-- posture:value[:fallback] - 0 folded, 1 half-folded, 2 unfolded -->
-        <item>0:1</item>
+        <!-- Folded: auto-rotate on. Locked-by-default froze the cover at user_rotation 3 (sideways) after a clean install. -->
+        <item>0:2</item>
         <item>1:0:2</item>
         <item>2:2</item>
     </string-array>
