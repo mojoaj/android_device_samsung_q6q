@@ -11,8 +11,10 @@
     <!-- Status bar height. There is no per-display array in frameworks: the height is
          max(cutout top inset, status_bar_height_default), so it is set per screen size
          (values = cover, values-sw600dp = inner). Stock BYGB cover: 88px portrait (= the
-         punch-hole cutout height), 63px landscape (logs/stock-BYGB/dumpsys-window.txt). -->
-    <dimen name="status_bar_height_default">88px</dimen>
-    <dimen name="status_bar_height_portrait">88px</dimen>
+         punch-hole cutout height) with icons pushed down to the camera's centre line (y=56.5);
+         63px landscape (logs/stock-BYGB/dumpsys-window.txt). Our icons are centred in the bar,
+         so the cover bar is 116px instead, which puts them level with the camera (user choice). -->
+    <dimen name="status_bar_height_default">116px</dimen>
+    <dimen name="status_bar_height_portrait">116px</dimen>
     <dimen name="status_bar_height_landscape">63px</dimen>
 </resources>
