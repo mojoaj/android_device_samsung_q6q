@@ -13,6 +13,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_SYSTEM_PROPERTIES += \
     lineage.updater.uri=https://raw.githubusercontent.com/mojoaj/lineage_q6q_ota/main/q6q.json
 
+# Audio (OSS Qualcomm audio stack: stock F956B mixer paths and resource manager)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/mixer_paths_pineapple.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml \
+    $(LOCAL_PATH)/configs/audio/resourcemanager_pineapple.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
+
 # Boot animation (cover screen size; multi-display below)
 TARGET_SCREEN_HEIGHT := 2376
 TARGET_SCREEN_WIDTH := 968

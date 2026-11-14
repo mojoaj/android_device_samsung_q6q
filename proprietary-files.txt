@@ -6,10 +6,6 @@
 vendor/etc/audconf/OPEN/acdb_cal.acdb:vendor/etc/acdbdata/pineapple/acdb_cal.acdb
 vendor/etc/audconf/OPEN/workspaceFileXml.qwsp:vendor/etc/acdbdata/pineapple/workspaceFileXml.qwsp
 
-# Audio configs
-vendor/etc/audio/sku_pineapple/mixer_paths.xml
-vendor/etc/audio/sku_pineapple/resourcemanager.xml
-
 # Audio firmware
 vendor/firmware/cs40l26-a2h.bin
 vendor/firmware/cs40l26-calib.bin

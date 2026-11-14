@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 aconfig_value_set {
-    name: "aconfig_value_set-q6q-bp4a",
+    name: "aconfig_value_set-q6q-cp2a",
     srcs: [
         "*/Android.bp",
     ],

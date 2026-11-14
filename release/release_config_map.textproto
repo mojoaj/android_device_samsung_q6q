@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Anthony Mckeever
 # SPDX-License-Identifier: Apache-2.0
 #
-# q6q additions to the bp4a release config (found by build/make/core/release_config.mk
+# q6q additions to the cp2a release config (found by build/make/core/release_config.mk
 # under device/*/*/release).
 
 default_containers: "product"
@@ -10,6 +10,6 @@ default_containers: "system_ext"
 default_containers: "vendor"
 
 release_config {
-    name: "bp4a"
-    flag_value_files: "release_configs/bp4a.textproto"
+    name: "cp2a"
+    flag_value_files: "release_configs/cp2a.textproto"
 }

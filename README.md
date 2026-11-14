@@ -1,6 +1,6 @@
 # Device tree for the Samsung Galaxy Z Fold6 (SM-F956B, q6q)
 
-Unofficial LineageOS 23.2 device tree for the Snapdragon 8 Gen 3 Galaxy Z Fold6.
+Unofficial LineageOS 24.0 device tree for the Snapdragon 8 Gen 3 Galaxy Z Fold6.
 
 Maintained by [mojoaj](https://github.com/mojoaj).
 
@@ -17,11 +17,11 @@ Maintained by [mojoaj](https://github.com/mojoaj).
 
 ## Building
 
-Use the manifest at <https://github.com/mojoaj/android_local_manifests_q6q> on top of LineageOS `lineage-23.2`, then:
+Use the manifest at <https://github.com/mojoaj/android_local_manifests_q6q> on top of LineageOS `lineage-24.0`, then:
 
 ```sh
 source build/envsetup.sh
-lunch lineage_q6q-bp4a-userdebug
+lunch lineage_q6q-cp2a-userdebug
 m bacon
 ```
 
