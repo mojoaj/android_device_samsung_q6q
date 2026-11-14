@@ -184,9 +184,12 @@
 
     <bool name="config_allowRotationResolver">false</bool>
 
-    <bool name="config_unfoldTransitionEnabled">true</bool>
+    <!-- AOSP unfold animation (inner screen dimmed and scaled, following the hinge) off:
+         it kept the inner screen looking dark until ~fully open, 0.6-0.8 s after the panel
+         was already on (logs/unfold-1). Stock One UI shows the inner screen at once. -->
+    <bool name="config_unfoldTransitionEnabled">false</bool>
 
-    <bool name="config_unfoldTransitionHingeAngle">true</bool>
+    <bool name="config_unfoldTransitionHingeAngle">false</bool>
 
     <bool name="config_windowManagerPauseRotationWhenUnfolding">true</bool>
 
