@@ -204,6 +204,14 @@
 
     <bool name="config_fold_lock_behavior">true</bool>
 
+    <!-- The hall sensor ("flip" input device) sends SW_LID when the phone is fully
+         closed. sm8650-common sets config_lidControlsSleep for flip covers, which made
+         the phone sleep on every close and ignore Settings > Display > "Continue using
+         apps on fold". Let the fold setting (config_fold_lock_behavior) decide instead.
+         Note: this only seeds Settings.Global.LID_BEHAVIOR on a fresh install. -->
+    <bool name="config_lidControlsSleep">false</bool>
+    <bool name="config_lidControlsScreenLock">false</bool>
+
     <!-- Side fingerprint sensor (side key), per display, natural orientation.
          X = right edge. SystemUI (SideFpsSensorInteractor) takes Y as the TOP of the
          sensor and draws the hint over 2 x radius, so Y = measured key centre - radius

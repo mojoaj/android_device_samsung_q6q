@@ -6,11 +6,16 @@
 package org.lineageos.server.policy;
 
 import android.annotation.NonNull;
+import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.provider.Settings;
 import android.util.Slog;
 
 import com.android.server.devicestate.DeviceStatePolicy;
@@ -48,8 +53,16 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
     private static final String TYPE_ACCELEROMETER_SUB = "com.samsung.sensor.accelerometer_sub";
     private static final String NAME_ACCELEROMETER_MAIN = "lsm6dsv LSM6DSV Accelerometer";
 
+    // Settings.Global.LID_BEHAVIOR (hidden). Builds before b46 seeded it with 1 (sleep)
+    // from sm8650-common's config_lidControlsSleep, so closing the phone fully always
+    // slept and ignored "Continue using apps on fold". Reset it to 0 (none) once.
+    private static final String LID_BEHAVIOR = "lid_behavior";
+    private static final String LID_MIGRATED = "q6q_lid_behavior_migrated";
+
     @Override
     public DeviceStatePolicy instantiate(@NonNull Context context) {
+        migrateLidBehaviorAfterBoot(context);
+
         final SensorManager sm = context.getSystemService(SensorManager.class);
 
         Sensor foldingAngle = null;
@@ -136,6 +149,35 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
         }
 
         return policy;
+    }
+
+    private static void migrateLidBehaviorAfterBoot(Context context) {
+        // Never let this take system_server down: worst case the setting stays as it was.
+        try {
+            registerLidMigration(context);
+        } catch (RuntimeException e) {
+            Slog.w(TAG, "lid_behavior migration not registered", e);
+        }
+    }
+
+    private static void registerLidMigration(Context context) {
+        context.registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context ctx, Intent intent) {
+                ctx.unregisterReceiver(this);
+                try {
+                    final ContentResolver cr = ctx.getContentResolver();
+                    if (Settings.Global.getInt(cr, LID_MIGRATED, 0) != 0) return;
+                    if (Settings.Global.getInt(cr, LID_BEHAVIOR, 0) == 1) {
+                        Settings.Global.putInt(cr, LID_BEHAVIOR, 0);
+                        Slog.i(TAG, "lid_behavior: sleep -> none (fold setting decides)");
+                    }
+                    Settings.Global.putInt(cr, LID_MIGRATED, 1);
+                } catch (RuntimeException e) {
+                    Slog.w(TAG, "lid_behavior migration failed", e);
+                }
+            }
+        }, new IntentFilter(Intent.ACTION_LOCKED_BOOT_COMPLETED));
     }
 
     /**
