@@ -7,11 +7,13 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Status bar side padding. Must equal the privacy dot minimum (20dp): SystemUI uses
+    <!-- Status bar side padding (cover). Must equal the privacy dot minimum: SystemUI uses
          max(dot, this) on one side and this on the other, and the cover's centred punch
          hole spacer sits between two equal-weight halves, so unequal sides push the
-         end-side icons into the hole. -->
-    <dimen name="rounded_corner_content_padding">20dp</dimen>
+         end-side icons into the hole. 6dp puts the clock at x=39 and the battery 38 px
+         from the right edge, as stock One UI. Inner: values-sw600dp. -->
+    <dimen name="rounded_corner_content_padding">6dp</dimen>
+    <dimen name="ongoing_appops_dot_min_padding">6dp</dimen>
 
     <!-- Height of the status bar header bar when on Keyguard -->
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>

@@ -13,8 +13,11 @@
     <!-- Inner (main built-in) display: under-display camera, no cutout (as stock). -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false"></string>
 
-    <!-- Cover (secondary built-in) display punch hole, from stock DisplayCutout (968x2376, density 2.625) -->
-    <string name="config_secondaryBuiltInDisplayCutout" translatable="false">M 0,0 H -12.95238095238095 V 33.52380952380952 H 12.95238095238095 V 0 H 0 Z @dp</string>
+    <!-- Cover (secondary built-in) display punch hole. Stock DisplayCutout is 68x88 px
+         (+-12.95dp x 33.52dp); widened to 112 px (+-21.33dp) so status bar icons keep
+         ~22 px clear of the hole on both sides. Depth kept at 88 px (stock), as it only
+         sets the landscape side inset. -->
+    <string name="config_secondaryBuiltInDisplayCutout" translatable="false">M 0,0 H -21.333333333333332 V 33.52380952380952 H 21.333333333333332 V 0 H 0 Z @dp</string>
     <string name="config_secondaryBuiltInDisplayCutoutRectApproximation" translatable="false">@string/config_secondaryBuiltInDisplayCutout</string>
 
     <!-- Physical displays: inner (port 131) and cover (port 132). The per-display arrays
