@@ -20,7 +20,6 @@ import android.util.Slog;
 
 import com.android.server.devicestate.DeviceStatePolicy;
 import com.android.server.policy.BookStyleDeviceStatePolicy;
-import com.android.server.policy.feature.flags.FeatureFlagsImpl;
 
 /**
  * Galaxy Z Fold6 (q6q) device state policy: AOSP's book-style foldable policy
@@ -49,7 +48,6 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
 
     private static final String TYPE_FOLDING_ANGLE = "com.samsung.sensor.folding_angle";
     private static final String TYPE_FOLDING_STATE = "com.samsung.sensor.folding_state";
-    private static final String TYPE_HALL_IC = "com.samsung.sensor.hallIC";
     private static final String TYPE_ACCELEROMETER_SUB = "com.samsung.sensor.accelerometer_sub";
     private static final String NAME_ACCELEROMETER_MAIN = "lsm6dsv LSM6DSV Accelerometer";
 
@@ -67,7 +65,6 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
 
         Sensor foldingAngle = null;
         Sensor foldingState = null;
-        Sensor hall = null;
         Sensor accelMain = null;
         Sensor accelSub = null;
         for (Sensor s : sm.getSensorList(Sensor.TYPE_ALL)) {
@@ -77,8 +74,6 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
             } else if (foldingState == null && TYPE_FOLDING_STATE.equals(type)
                     && s.isWakeUpSensor()) {
                 foldingState = s;
-            } else if (hall == null && TYPE_HALL_IC.equals(type)) {
-                hall = s;
             } else if (accelSub == null && TYPE_ACCELEROMETER_SUB.equals(type)) {
                 accelSub = s;
             } else if (accelMain == null && s.getType() == Sensor.TYPE_ACCELEROMETER
@@ -92,10 +87,6 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
         if (hinge == null) {
             throw new IllegalStateException("No hinge angle sensor");
         }
-        if (hall == null) {
-            // Unused while posture-based closed state is enabled, but must be non-null.
-            hall = hinge;
-        }
         if (accelMain == null) {
             accelMain = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         }
@@ -106,12 +97,12 @@ public class Q6qDeviceStatePolicyProvider implements DeviceStatePolicy.Provider 
         final Sensor right = accelMain;
 
         Slog.i(TAG, "hinge=" + hinge.getName() + " wake=" + (foldingState != null
-                ? foldingState.getName() : null) + " hall=" + hall.getName()
+                ? foldingState.getName() : null)
                 + " left=" + (left != null ? left.getName() : null)
                 + " right=" + (right != null ? right.getName() : null));
 
         final BookStyleDeviceStatePolicy policy = new BookStyleDeviceStatePolicy(
-                new FeatureFlagsImpl(), context, hinge, hall, left, right,
+                context, hinge, left, right,
                 /* closeAngleDegrees= */ null);
 
         if (!(policy.getDeviceStateProvider() instanceof SensorEventListener)) {
