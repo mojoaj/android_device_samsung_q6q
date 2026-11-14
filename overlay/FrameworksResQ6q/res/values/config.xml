@@ -10,6 +10,12 @@
 
     <integer name="config_defaultPeakRefreshRate">120</integer>
 
+    <!-- No fixed 120 Hz in the low brightness + low lux zone (sm8650-common sets 120 for
+         the S24 panel). Fold6 panels showed no flicker switching 48/96/120 Hz at minimum
+         brightness in a dark room (24-b8, refresh_rate_in_zone 0), and the lock kept
+         video at 120 Hz in exactly the conditions movies are watched in. -->
+    <integer name="config_defaultRefreshRateInZone">0</integer>
+
     <!-- Inner (main built-in) display: under-display camera, no cutout (as stock). -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false"></string>
 
