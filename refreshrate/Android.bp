@@ -1,0 +1,13 @@
+//
+// SPDX-FileCopyrightText: 2026 Anthony Mckeever
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Defaults the minimum refresh rate to the panel maximum (see BootReceiver).
+android_app {
+    name: "Q6qRefreshRate",
+    srcs: ["src/**/*.java"],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+}

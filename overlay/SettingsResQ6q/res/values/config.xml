@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 Anthony Mckeever
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Display > Minimum refresh rate. Defaults to the panel maximum (Q6qRefreshRate);
+         lowering it lets SurfaceFlinger idle below 120 Hz at the cost of first-touch lag. -->
+    <bool name="config_show_min_refresh_rate_switch">true</bool>
+</resources>

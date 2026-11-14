@@ -37,6 +37,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     FrameworksResQ6q \
     LineageResQ6q \
+    SettingsResQ6q \
     SystemUIResQ6q \
     UpdaterResQ6q \
     WifiResTargetQ6q
@@ -56,6 +57,10 @@ PRODUCT_COPY_FILES += \
 # Fold hall calibration
 PRODUCT_PACKAGES += \
     init.q6q.dhall.sh
+
+# Display: keep the composer at 120 Hz, panel LFD handles idle
+PRODUCT_PACKAGES += \
+    Q6qRefreshRate
 
 # Power
 PRODUCT_COPY_FILES += \
