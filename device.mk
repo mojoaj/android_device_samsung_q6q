@@ -58,9 +58,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.q6q.dhall.sh
 
-# Display: keep the composer at 120 Hz, panel LFD handles idle
+# Display: 120 Hz composer default + panel LFD policy
 PRODUCT_PACKAGES += \
-    Q6qRefreshRate
+    Q6qDisplayPolicy
 
 # Power
 PRODUCT_COPY_FILES += \

@@ -4,3 +4,6 @@
 #
 
 type sysfs_sec_digital_hall, sysfs_type, fs_type;
+
+# Panel low-frequency drive requests (Q6qDisplayPolicy)
+type sysfs_panel_lfd, sysfs_type, fs_type;

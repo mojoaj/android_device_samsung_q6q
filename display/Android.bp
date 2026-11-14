@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-// Defaults the minimum refresh rate to the panel maximum (see BootReceiver).
+// Display policy for the Galaxy Z Fold6: refresh-rate default and panel LFD rules.
 android_app {
-    name: "Q6qRefreshRate",
+    name: "Q6qDisplayPolicy",
     srcs: ["src/**/*.java"],
     certificate: "platform",
     platform_apis: true,
