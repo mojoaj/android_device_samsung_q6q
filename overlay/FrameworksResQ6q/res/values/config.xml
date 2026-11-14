@@ -115,8 +115,9 @@
 
     <item name="config_screenBrightnessDimFloat" type="dimen">0.015686275</item>
 
-    <!-- Lux -> nits curve, stock BYGB's (logs/stock-BYGB/FINDINGS.md). Same on both
-         panels. Above 500 nits needs HBM (from 3000 lux, display configs). -->
+    <!-- Lux -> nits curve, stock BYGB's (logs/stock-BYGB/FINDINGS.md). Fallback only:
+         both display configs carry their own luxToBrightnessMapping (the inner one is
+         scaled for its weaker light sensor). Above 500 nits needs HBM (from 3000 lux). -->
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
         <item>2</item>
