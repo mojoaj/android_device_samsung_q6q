@@ -7,7 +7,7 @@
 java_library {
     name: "q6q-devicestate",
     srcs: ["src/**/*.java"],
-    libs: ["services"],
+    libs: ["services.impl"],
     static_libs: ["foldable-device-state-provider"],
     system_ext_specific: true,
     installable: true,
