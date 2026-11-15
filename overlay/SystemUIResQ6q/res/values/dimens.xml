@@ -29,4 +29,9 @@
     <!-- Pixel pitch of the device. um/px -->
     <item name="pixel_pitch" format="float" type="dimen">50.69</item>
 
+    <!-- WM Shell letterbox UI, as pixel_fold2: offer "restart app" when a size-compat app
+         changes size (fold/unfold), and show the double-tap reachability hint.
+         (Kept in this file: a new overlay file forces a full soong re-analysis, which OOMs.) -->
+    <bool name="config_letterboxIsRestartDialogEnabled">true</bool>
+    <bool name="config_letterboxIsReachabilityEducationEnabled">true</bool>
 </resources>
