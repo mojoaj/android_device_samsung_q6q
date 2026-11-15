@@ -244,4 +244,14 @@
         <item>1000</item>
         <item>120</item>
     </array>
+
+    <!-- Inner screen is portrait (707x823dp): split side by side in portrait like One UI
+         and AOSP's pixel_fold2 overlay; landscape then splits top/bottom. -->
+    <bool name="config_leftRightSplitInPortrait">true</bool>
+
+    <!-- Letterbox portrait-only apps to the display aspect ratio (pixel_fold2). -->
+    <bool name="config_letterboxIsDisplayAspectRatioForFixedOrientationLetterboxEnabled">true</bool>
+
+    <!-- Desktop windowing (floating windows) as an opt-in Developer options switch. -->
+    <bool name="config_isDesktopModeDevOptionSupported">true</bool>
 </resources>

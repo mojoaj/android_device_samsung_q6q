@@ -7,4 +7,7 @@
     <!-- Display > Minimum refresh rate. Defaults to the panel maximum (Q6qRefreshRate);
          lowering it lets SurfaceFlinger idle below 120 Hz at the cost of first-touch lag. -->
     <bool name="config_show_min_refresh_rate_switch">true</bool>
+
+    <!-- Two-pane Settings on the inner screen in portrait too (707dp wide; AOSP needs 720). -->
+    <integer name="config_activity_embed_split_min_cur_dp">700</integer>
 </resources>

@@ -10,6 +10,10 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # OTA updates (Updater app): JSON published at github.com/mojoaj/lineage_q6q_ota
+# Large-screen Settings (two-pane on the inner screen), as on Pixel tablets/foldables
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.settings.large_screen_opt.enabled=true
+
 PRODUCT_SYSTEM_PROPERTIES += \
     lineage.updater.uri=https://raw.githubusercontent.com/mojoaj/lineage_q6q_ota/main/q6q.json
 
