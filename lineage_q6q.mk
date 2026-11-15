@@ -22,3 +22,7 @@ PRODUCT_MODEL := SM-F956B
 PRODUCT_MANUFACTURER := Samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# KeyMint ID attestation was provisioned with the stock product name;
+# lineage_q6q makes it fail with CANNOT_ATTEST_IDS (breaks GMS attestation).
+PRODUCT_NAME_FOR_ATTESTATION := q6qxxx
