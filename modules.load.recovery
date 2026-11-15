@@ -345,6 +345,7 @@ sec_pd.ko
 sb_wireless.ko
 sec-battery.ko
 fst2ca78y_spi.ko
+fst3ca60y_i2c.ko
 snvm.ko
 nfc_nxp_sec.ko
 s2mpb02-regulator.ko

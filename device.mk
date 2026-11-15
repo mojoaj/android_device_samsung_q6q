@@ -31,7 +31,8 @@ $(call soong_config_set_bool,bootanimation,multidisplay,true)
 
 # Init
 PRODUCT_PACKAGES += \
-    init.q6q.rc
+    init.q6q.rc \
+    init.recovery.q6q.rc
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \

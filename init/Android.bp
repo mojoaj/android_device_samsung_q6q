@@ -15,3 +15,10 @@ sh_binary {
     src: "init.q6q.dhall.sh",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.recovery.q6q.rc",
+    src: "init.recovery.q6q.rc",
+    sub_dir: "init",
+    recovery: true,
+}

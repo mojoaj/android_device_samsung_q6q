@@ -1,0 +1,23 @@
+#
+# SPDX-FileCopyrightText: 2026 Anthony Mckeever
+# SPDX-License-Identifier: Apache-2.0
+#
+# Recovery: follow the fold like the OS does. minui switches between the inner
+# (DSI-1) and cover (DSI-2) panels on SW_LID from the "flip" hall switch, which
+# only toggles once this unit's factory thresholds are loaded (see
+# init.q6q.dhall.sh). sec_efs is mounted read-only with noload, so the journal
+# is never replayed and nothing is written to it.
+
+on init
+    # Touches from this digitiser only drive the cover panel (DRM_SEC).
+    setprop ro.minui.second_touch_device sec_touchscreen2
+    setprop ro.minui.second_rotation ROTATION_NONE
+    write /sys/class/backlight/panel1-backlight/brightness 200
+
+on post-fs
+    wait /dev/block/bootdevice/by-name/sec_efs
+    mkdir /mnt/dhall_efs 0700 root root
+    mount ext4 /dev/block/bootdevice/by-name/sec_efs /mnt/dhall_efs ro nosuid nodev noexec noload
+    copy /mnt/dhall_efs/FactoryApp/digital_hall /sys/class/sec/digital_hall/digital_hall_thd
+    umount /mnt/dhall_efs
+    rmdir /mnt/dhall_efs
