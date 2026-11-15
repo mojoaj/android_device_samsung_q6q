@@ -14,10 +14,9 @@ on init
     setprop ro.minui.second_rotation ROTATION_NONE
     write /sys/class/backlight/panel1-backlight/brightness 200
 
-on post-fs
-    wait /dev/block/bootdevice/by-name/sec_efs
-    mkdir /mnt/dhall_efs 0700 root root
-    mount ext4 /dev/block/bootdevice/by-name/sec_efs /mnt/dhall_efs ro nosuid nodev noexec noload
-    copy /mnt/dhall_efs/FactoryApp/digital_hall /sys/class/sec/digital_hall/digital_hall_thd
-    umount /mnt/dhall_efs
-    rmdir /mnt/dhall_efs
+# The init builtins (wait/mount/copy) never mounted sec_efs here on 24-b23
+# (no EXT4 sda9 line, threshold stayed 0,0,20000,2000), so the load runs as one
+# shell step in recovery's own context, before "on boot" starts recovery, and
+# logs the result to kmsg. ($$ = literal $ for init.)
+on early-boot
+    exec u:r:recovery:s0 root root -- /system/bin/sh -c "D=/mnt/dhall_efs; T=/sys/class/sec/digital_hall/digital_hall_thd; mkdir -p $$D && mount -t ext4 -o ro,nosuid,nodev,noexec,noload /dev/block/bootdevice/by-name/sec_efs $$D && cat $$D/FactoryApp/digital_hall > $$T; r=$$?; umount $$D; rmdir $$D; echo q6q-dhall: ret=$$r thd=$$(cat $$T) > /dev/kmsg"
