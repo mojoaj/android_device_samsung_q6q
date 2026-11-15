@@ -15,3 +15,7 @@ debug.sf.ignore_hwc_physical_display_orientation=true
 # under-display camera, even when folded.
 vendor.camera.aux.idlimit=4
 vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.cameraextensions,com.google.android.GoogleCamera
+
+# Audio: send display rotation to the audio HAL so the stereo speakers swap L/R at 270 deg
+# (left channel follows whichever speaker is on the left). Verified live on cover + inner.
+ro.audio.monitorRotation=true
