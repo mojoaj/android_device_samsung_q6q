@@ -227,8 +227,8 @@
          sensor and draws the hint over 2 x radius, so Y = measured key centre - radius
          (inner 1020 - 110). Cover tuned on device (b40: hint middle at 1080,
          wanted 1125) to 1020, then
-         20 px higher (1000) on 24.0 (24-b11), then 19 px lower (1019) after the
-         24.0 hint middle measured at 1106, wanted 1125. Radius ~ half the key length (GUESS). -->
+         20 px higher (1000) on 24.0 (24-b11). Hint middle (y from the screen top) =
+         Y + ~106 (1000 -> 1106, 1055 -> 1161); user wants the middle at y=1115 -> 1009. Radius ~ half the key length (GUESS). -->
     <array name="config_sfps_sensor_props" translatable="false">
         <item>@array/config_sfps_sensor_props_inner</item>
         <item>@array/config_sfps_sensor_props_cover</item>
@@ -242,7 +242,7 @@
     <array name="config_sfps_sensor_props_cover" translatable="false">
         <item>local:4630947194243491972</item>
         <item>968</item>
-        <item>1019</item>
+        <item>1009</item>
         <item>120</item>
     </array>
 
