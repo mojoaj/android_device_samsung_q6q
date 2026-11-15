@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 Anthony Mckeever
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- WM Shell letterbox UI, as pixel_fold2: offer "restart app" when a size-compat app
+         changes size (fold/unfold), and show the double-tap reachability hint. -->
+    <bool name="config_letterboxIsRestartDialogEnabled">true</bool>
+    <bool name="config_letterboxIsReachabilityEducationEnabled">true</bool>
+</resources>

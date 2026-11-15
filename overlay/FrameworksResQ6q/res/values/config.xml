@@ -104,6 +104,10 @@
         <item>0:2</item>
         <item>1:0:2</item>
         <item>2:2</item>
+        <!-- Rear display (cover screen while unfolded): follow the folded setting, as
+             pixel_fold2. Without this key, entering state 3 crashed system_server
+             (DeviceStateAutoRotateSettingManagerImpl: Key 3 not found). -->
+        <item>3:0:0</item>
     </string-array>
 
     <item name="config_screenBrightnessSettingMinimumFloat" type="dimen">0.0</item>
@@ -256,4 +260,23 @@
 
     <!-- Desktop windowing (floating windows) as an opt-in Developer options switch. -->
     <bool name="config_isDesktopModeDevOptionSupported">true</bool>
+
+    <!-- Apps may request rear display / dual screen through Jetpack WindowAreaController
+         (pixel_fold2). -->
+    <string-array name="config_deviceStatesAvailableForAppRequests" translatable="false">
+        <item>config_deviceStateRearDisplay</item>
+        <item>config_deviceStateConcurrentRearDisplay</item>
+    </string-array>
+
+    <!-- Large-screen app compat, as Pixel foldables/tablets:
+         double-tap a letterboxed app to move it left/right (landscape) or up/down (portrait),
+         with a one-time hint, -->
+    <bool name="config_letterboxIsHorizontalReachabilityEnabled">true</bool>
+    <bool name="config_letterboxIsVerticalReachabilityEnabled">true</bool>
+    <bool name="config_letterboxIsEducationEnabled">true</bool>
+    <!-- translucent activities (dialogs, permission prompts) follow their letterboxed app, -->
+    <bool name="config_letterboxIsEnabledForTranslucentActivities">true</bool>
+    <!-- and Settings > Apps > (app) > Aspect ratio, incl. "Full screen". -->
+    <bool name="config_appCompatUserAppAspectRatioSettingsIsEnabled">true</bool>
+    <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
 </resources>
