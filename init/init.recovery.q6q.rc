@@ -14,9 +14,6 @@ on init
     setprop ro.minui.second_rotation ROTATION_NONE
     # Cover at 50% like the inner panel gets from recovery (6375 of 12750; 200 was ~1.6%).
     write /sys/class/backlight/panel1-backlight/brightness 6375
-    # TEMP (user, 2026-11-15): ADB on without the menu while recovery is being debugged.
-    # Same as recovery's Enable ADB item. Remove before release.
-    setprop ro.adb.secure.recovery 0
 
 # Load this unit's hall thresholds before "on boot" starts recovery, which reads
 # SW_LID once at start (booting folded must open on the cover). sec_efs is
