@@ -254,4 +254,8 @@
 
     <!-- Desktop windowing (floating windows) as an opt-in Developer options switch. -->
     <bool name="config_isDesktopModeDevOptionSupported">true</bool>
+
+    <!-- Desktop windows (title bars, drag/resize/minimize) on the inner screen. Shell only
+         allows it while the internal display is large (unfolded), and keeps app bubbles. -->
+    <bool name="config_canInternalDisplayHostDesktops">true</bool>
 </resources>
