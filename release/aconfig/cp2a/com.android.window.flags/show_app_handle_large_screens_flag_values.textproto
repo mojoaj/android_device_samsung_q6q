@@ -1,9 +1,0 @@
-# Show the app handle (and its windowing menu) on the unfolded inner screen even while
-# desktop windows are off (Quick Settings tile). Google's flag for large screens that
-# don't use desktop mode; off in cp2a.
-flag_value {
-  package: "com.android.window.flags"
-  name: "show_app_handle_large_screens"
-  state: ENABLED
-  permission: READ_ONLY
-}
