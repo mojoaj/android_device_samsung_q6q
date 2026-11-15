@@ -9,3 +9,9 @@ ro.radio.noril=no
 # Display: inner panel is mounted rotated (same as stock F956B)
 ro.surface_flinger.primary_display_orientation=ORIENTATION_270
 debug.sf.ignore_hwc_physical_display_orientation=true
+
+# Camera: hide Samsung's extra camera IDs (20+: inner under-display camera, lens modes)
+# from apps, like One UI (stock exposes 0-3). Snapchat otherwise picks ID 71, the inner
+# under-display camera, even when folded.
+vendor.camera.aux.idlimit=4
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.cameraextensions,com.google.android.GoogleCamera
