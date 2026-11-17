@@ -10,4 +10,9 @@
 
     <!-- Two-pane Settings on the inner screen in portrait too (707dp wide; AOSP needs 720). -->
     <integer name="config_activity_embed_split_min_cur_dp">700</integer>
+
+    <!-- Wider left (menu) pane: AOSP's 0.3636 gives ~257dp on the 707dp inner screen,
+         which truncates the top-level titles. 0.45 gives ~318dp (portrait). -->
+    <item name="config_activity_embed_split_ratio" format="float" type="dimen">0.45</item>
+</resources>
 </resources>
