@@ -9,4 +9,10 @@
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
     <bool name="config_cleanupUnusedFingerprints">false</bool>
 
+    <!-- Pocket check: double tap to wake (KEY_WAKEUP) checks proximity first, and
+         SystemUI pauses screen-off side-key fingerprint auth while proximity is near.
+         Both only while folded (frameworks/base patch). -->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+
 </resources>
