@@ -9,13 +9,13 @@
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# OTA updates (Updater app): JSON published at github.com/mojoaj/lineage_q6q_ota
+# OTA updates (Updater app): JSON published at github.com/mojoaj/lineage_q6q_ota (24.0 has its own feed so 23.2 users are not offered Android 17)
 # Large-screen Settings (two-pane on the inner screen), as on Pixel tablets/foldables
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.settings.large_screen_opt.enabled=true
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    lineage.updater.uri=https://raw.githubusercontent.com/mojoaj/lineage_q6q_ota/main/q6q.json
+    lineage.updater.uri=https://raw.githubusercontent.com/mojoaj/lineage_q6q_ota/main/q6q-24.0.json
 
 # Audio (OSS Qualcomm audio stack: stock F956B mixer paths and resource manager)
 PRODUCT_COPY_FILES += \
