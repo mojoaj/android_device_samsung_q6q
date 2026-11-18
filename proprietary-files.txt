@@ -172,10 +172,6 @@ vendor/firmware/00_generic_xtalk_shape.bin
 vendor/firmware/vl53l8.bin
 
 
-# Ultra-wideband
-vendor/firmware/uwb/libsr200t_dev_fw.bin
-vendor/firmware/uwb/libsr200t_prod_fw.so
-
 # VPU firmware
 vendor/firmware/vpu30_2v.mbn
 vendor/firmware/vpu30_2v_unsigned.mbn
