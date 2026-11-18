@@ -77,7 +77,7 @@ on boot
     chmod 0664 /dev/cpuset/moderate/cpus
     chmod 0664 /dev/cpuset/moderate/cgroup.procs
 
-    write /proc/sys/vm/swappiness 130
+    write /proc/sys/vm/swappiness 100
     write /sys/module/zram/parameters/zram_balance_ratio 0
 
 # [ Permissions for Range Sensor Sensor
