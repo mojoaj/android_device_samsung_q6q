@@ -22,3 +22,10 @@ prebuilt_etc {
     sub_dir: "init",
     recovery: true,
 }
+
+prebuilt_etc {
+    name: "init.q6q.attestation.rc",
+    src: "init.q6q.attestation.rc",
+    sub_dir: "init",
+    vendor: true,
+}

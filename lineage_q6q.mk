@@ -23,6 +23,7 @@ PRODUCT_MANUFACTURER := Samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-# KeyMint ID attestation was provisioned with the stock product name;
-# lineage_q6q makes it fail with CANNOT_ATTEST_IDS (breaks GMS attestation).
-PRODUCT_NAME_FOR_ATTESTATION := q6qxxx
+# KeyMint ID attestation uses the stock region product name (q6qxeea,
+# q6qxxx, ...); init.q6q.attestation.rc sets it from ro.boot.carrierid.
+# The manufacturer was provisioned lowercase (stock ro.product.manufacturer).
+PRODUCT_MANUFACTURER_FOR_ATTESTATION := samsung

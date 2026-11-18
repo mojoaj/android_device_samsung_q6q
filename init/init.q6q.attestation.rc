@@ -1,0 +1,1154 @@
+# Copyright (C) 2026 Anthony Mckeever
+# SPDX-License-Identifier: Apache-2.0
+#
+# KeyMint ID attestation was provisioned at the factory with the region
+# product name (ro.product.name on stock), which stock init derives from
+# ro.boot.carrierid: European sales codes -> q6qxeea, SER/TUR/INS groups ->
+# q6qxser/q6qxtur/q6qxins, everything else -> q6qxxx. A mismatch makes every
+# ID-attested key fail with CANNOT_ATTEST_IDS.
+# The European code list is the EEA table from stock /system/bin/init (BYGB).
+# One block per code; the fallback at the end must stay last.
+
+on init && property:ro.boot.carrierid=E49
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOY
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E34
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E45
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DAT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MAP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MAX
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TTR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MLI
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EMP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ONE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ONY
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TRG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TRP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TST
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ATO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DRE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DRG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BSE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=LUX
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MST
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PHB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PRO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TLB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BGL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BUL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E37
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=GBL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MTD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MTL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OMX
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VVT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CMF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E52
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BON
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CRG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CRO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CRP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DBB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DHR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SIO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TRA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TWO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VIP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CYS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CYO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CYV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E42
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=KBN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEZ
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XCS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DCZ
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PGP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PGS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TMZ
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OSK
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ETL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=O2C
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E50
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E31
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NEE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SEB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DNF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ELS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SAU
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TSF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DIG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DTL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E26
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E27
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=LBM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NRJ
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OUT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TL2
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ZER
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=FNC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MBD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=FRE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=AUC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CAR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VGF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=AME
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=LPM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SFR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=FTB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=FTM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OFV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OGD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BOG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=UNI
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BMW
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BMY
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BNZ
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DBP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DBT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E28
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MSD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PHO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OAO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DEF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VD2
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VNL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VNN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DCO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DDE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DTM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DTO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DTP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DTR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VIA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VID
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VIT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EPL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EPP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EPR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E41
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=COS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DGR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E25
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=GRB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TGR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VGR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E43
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEH
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=UPC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DHU
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=HBM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=HTM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TMH
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=WSP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=WST
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TSH
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDH
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PAN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SHA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ICL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ANP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EIR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TSI
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDI
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEI
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=3IE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MET
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=O2I
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E29
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ITV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MTV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XET
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=HUI
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=O3I
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=FWB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=GOM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PIT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CIT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OMN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TIM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VOM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=WIN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E40
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BAL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EMT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ESA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EST
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=LMT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TLE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TLV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BGM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TLT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=LRT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OMT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E48
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=AHN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=AHP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E32
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PHN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TPD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DEB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DEP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DBE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DNL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TNL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TNN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TNP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TNS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ING
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=RAB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=RAP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TE2
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TEP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TFP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TFT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=KPN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=KPP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=KPS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ONL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NCM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XDN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TEN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TPN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TNO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E33
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DHE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DPL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ERA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TPL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CRT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NET
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=POL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PRT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=IDE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OPV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PLS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MEO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TMN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TMP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TCL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=WOR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CVP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CVT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E38
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TPH
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=UZO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ZON
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OPT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E36
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CNX
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=COA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DRO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=HAT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=RDS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ROM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=RVF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=GTL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORX
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=OSV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=IRD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XSK
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=DSK
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ESK
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ESR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TMS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=O2S
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TLF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E53
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=MOT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SIM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BIT
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E30
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E46
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=FOP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ONO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=YOG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E01
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E02
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E03
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E04
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E05
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E06
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E07
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E08
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E09
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E10
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E11
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=E12
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=PHE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=AMM
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=AMN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=AMO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TCB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TEE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XES
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ATL
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BAU
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BCN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BHK
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BME
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BNA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BNB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BNO
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BNR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BSG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BTH
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CHS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=HTD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NDN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NEB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NSF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SEN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TDK
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XSF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NNE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=NSE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TNB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XER
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SEA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=COV
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TLA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TSN
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VDS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=HTS
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ODK
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SNF
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TDC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ASD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BTU
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=U01
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=U02
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=U03
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=U04
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=U05
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=U06
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=U07
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=XEU
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BTB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=BTE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EVP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EVR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ORA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VIR
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=P4U
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=ARG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=CPW
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=O2P
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=O2U
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TMU
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VOD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=VOP
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=H3G
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=TSC
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUD
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EUX
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EEA
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EEB
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EED
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EEE
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EEG
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=EEX
+    setprop ro.product.name_for_attestation q6qxeea
+
+on init && property:ro.boot.carrierid=SER
+    setprop ro.product.name_for_attestation q6qxser
+
+on init && property:ro.boot.carrierid=R02
+    setprop ro.product.name_for_attestation q6qxser
+
+on init && property:ro.boot.carrierid=SKZ
+    setprop ro.product.name_for_attestation q6qxser
+
+on init && property:ro.boot.carrierid=R04
+    setprop ro.product.name_for_attestation q6qxser
+
+on init && property:ro.boot.carrierid=JCO
+    setprop ro.product.name_for_attestation q6qxser
+
+on init && property:ro.boot.carrierid=TUR
+    setprop ro.product.name_for_attestation q6qxtur
+
+on init && property:ro.boot.carrierid=M09
+    setprop ro.product.name_for_attestation q6qxtur
+
+on init && property:ro.boot.carrierid=INS
+    setprop ro.product.name_for_attestation q6qxins
+
+on init && property:ro.boot.carrierid=INU
+    setprop ro.product.name_for_attestation q6qxins
+
+# Anything not listed above (and an empty carrierid).
+on late-init && property:ro.product.name_for_attestation=
+    setprop ro.product.name_for_attestation q6qxxx
